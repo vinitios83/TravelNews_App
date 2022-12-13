@@ -1,0 +1,6 @@
+dependencies: \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/GULNetworkConstants.m \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/GoogleUtilities.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkConstants.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLogger.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLoggerLevel.h

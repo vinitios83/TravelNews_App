@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>297139771444-7lce8g9hmpqq1mj4pti1fbu4pa1j51m8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.297139771444-7lce8g9hmpqq1mj4pti1fbu4pa1j51m8</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>297139771444-4kvm11d9e8o5q82v2umtb2frup2jtr51.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDrLVHtRKhV-wduCKd8gQQfJ9gNLeEA9x0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>297139771444</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.travelworldonline.twoapp</string>
+	<key>PROJECT_ID</key>
+	<string>twotv-77e58</string>
+	<key>STORAGE_BUCKET</key>
+	<string>twotv-77e58.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:297139771444:ios:831dc2da7aa3f7bf32d261</string>
+	<key>DATABASE_URL</key>
+	<string>https://twotv-77e58-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

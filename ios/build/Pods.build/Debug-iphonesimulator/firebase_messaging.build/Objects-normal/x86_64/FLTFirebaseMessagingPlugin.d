@@ -1,0 +1,73 @@
+dependencies: \
+  /Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.4/ios/Classes/FLTFirebaseMessagingPlugin.m \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/firebase_messaging.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/firebase_messaging/firebase_messaging-prefix.pch \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/GoogleUtilities.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/UserDefaults/Public/GoogleUtilities/GULUserDefaults.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Reachability/Public/GoogleUtilities/GULReachabilityChecker.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkURLSession.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkMessageCode.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkLoggerProtocol.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkConstants.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetwork.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULMutableDictionary.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/Public/GoogleUtilities/GULNSData+zlib.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLoggerLevel.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLogger.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/NSURLSession+GULPromises.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULURLSessionDataResponse.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULSecureCoding.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainUtils.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainStorage.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorageUserDefaults.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorage.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorable.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULAppEnvironmentUtil.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULSceneDelegateSwizzler.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULApplication.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULAppDelegateSwizzler.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/GoogleUtilities/GoogleUtilities-umbrella.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/firebase_core.build/module.modulemap \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Modules/module.modulemap \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterViewController.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterEngineGroup.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterEngine.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterDartProject.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterCallbackCache.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterTexture.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterPlatformViews.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterCodecs.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterChannels.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterPlugin.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterMacros.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterAppDelegate.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/Flutter.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FirebaseCore.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRLoggerLevel.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRConfiguration.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.24.0/ios/Classes/FLTFirebasePluginRegistry.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.24.0/ios/Classes/messages.g.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.24.0/ios/Classes/FLTFirebasePlugin.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.24.0/ios/Classes/FLTFirebaseCorePlugin.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/firebase_core/firebase_core-umbrella.h \
+  /Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.4/ios/Classes/FLTFirebaseMessagingPlugin.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Headers/Public/Firebase/Firebase.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FirebaseInstallations.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/FirebaseInstallations.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsErrors.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsAuthTokenResult.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallations.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/FirebaseInstallations/FirebaseInstallations-umbrella.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Public/FirebaseMessaging/FirebaseMessaging.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/FirebaseMessaging.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Public/FirebaseMessaging/FIRMessagingExtensionHelper.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Public/FirebaseMessaging/FIRMessaging.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/FirebaseMessaging/FirebaseMessaging-umbrella.h

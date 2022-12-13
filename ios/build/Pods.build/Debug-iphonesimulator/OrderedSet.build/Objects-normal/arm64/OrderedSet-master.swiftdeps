@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "3eb5642783c9a9a5271a70d53c982afade5fb0075d32fa51adfc9b74f6034915"
+build_start_time: [1669201943, 74594020]
+build_end_time: [1669201950, 929792881]
+inputs:
+  "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/OrderedSet/Sources/OrderedSet.swift": [1669197297, 15557765]

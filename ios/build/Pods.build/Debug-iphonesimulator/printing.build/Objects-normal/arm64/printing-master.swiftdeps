@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "b0c88b91ef833af39fdb5707a729f489e93cca5804c057a9879aff7c97fd403e"
+build_start_time: [1669201932, 573049068]
+build_end_time: [1669201937, 174999952]
+inputs:
+  "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/printing-5.9.3/ios/Classes/PrintJob.swift": [1669195747, 542948246]
+  "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/printing-5.9.3/ios/Classes/PrintingPlugin.swift": [1669195747, 542423248]

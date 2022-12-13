@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "9c9e4e2f82da3d68d578f9abce78b0bfbbc6a5b528638cb6ef8a81559f124aa9"
+build_start_time: [1669201984, 481354951]
+build_end_time: [1669201989, 291153907]
+inputs:
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/better_player-0.0.83/ios/Classes/CacheManager.swift"
+  : [1669196939, 552239894]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/better_player-0.0.83/ios/Classes/CachingPlayerItem.swift"
+  : [1669196939, 551641464]

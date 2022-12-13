@@ -1,0 +1,2 @@
+dependencies: \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Toast.build/DerivedSources/Toast_vers.c

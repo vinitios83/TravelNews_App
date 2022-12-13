@@ -1,0 +1,100 @@
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/LastTouchedAnchorOrImageJS.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LastTouchedAnchorOrImageJS.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LastTouchedAnchorOrImageJS.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LastTouchedAnchorOrImageJS.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LastTouchedAnchorOrImageJS.d"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/MyCookieManager.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyCookieManager.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyCookieManager.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyCookieManager.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyCookieManager.swiftdeps"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppBrowser/InAppBrowserWebViewController.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserWebViewController.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserWebViewController.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserWebViewController.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserWebViewController.o"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/MyWebStorageManager.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyWebStorageManager.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyWebStorageManager.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyWebStorageManager.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/MyWebStorageManager.swiftdeps"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebViewMethodHandler.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewMethodHandler.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewMethodHandler.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewMethodHandler.dia"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewMethodHandler.d"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebView/InAppWebView.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebView.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebView.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebView.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebView.o"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/InterceptAjaxRequestJS.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptAjaxRequestJS.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptAjaxRequestJS.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptAjaxRequestJS.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptAjaxRequestJS.dia"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppBrowser/InAppBrowserOptions.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserOptions.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserOptions.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserOptions.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppBrowserOptions.dia"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OriginalViewPortMetaTagContentJS.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OriginalViewPortMetaTagContentJS.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OriginalViewPortMetaTagContentJS.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OriginalViewPortMetaTagContentJS.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OriginalViewPortMetaTagContentJS.dia"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebViewStatic.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewStatic.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewStatic.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewStatic.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewStatic.dia"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OnWindowFocusEventJS.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowFocusEventJS.dia"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowFocusEventJS.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowFocusEventJS.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowFocusEventJS.d"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Options.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/Options.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/Options.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/Options.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/Options.dia"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/NSAttributedString.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/NSAttributedString.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/NSAttributedString.dia"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/NSAttributedString.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/NSAttributedString.o"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PlatformUtil.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/PlatformUtil.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/PlatformUtil.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/PlatformUtil.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/PlatformUtil.dia"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OnLoadResourceJS.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnLoadResourceJS.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnLoadResourceJS.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnLoadResourceJS.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnLoadResourceJS.dia"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/LeakAvoider.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LeakAvoider.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LeakAvoider.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LeakAvoider.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/LeakAvoider.o"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebView/InAppWebViewOptions.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewOptions.dia"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewOptions.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewOptions.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InAppWebViewOptions.o"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OnWindowBlurEventJS.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowBlurEventJS.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowBlurEventJS.o"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowBlurEventJS.dia"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/OnWindowBlurEventJS.swiftdeps"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/InterceptFetchRequestJS.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptFetchRequestJS.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptFetchRequestJS.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptFetchRequestJS.dia"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/InterceptFetchRequestJS.swiftdeps"
+"/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/JavaScriptBridgeJS.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/JavaScriptBridgeJS.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/JavaScriptBridgeJS.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/JavaScriptBridgeJS.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/flutter_inappwebview.build/Objects-normal/x86_64/JavaScriptBridgeJS.dia"

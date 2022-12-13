@@ -1,0 +1,40 @@
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/JSONDictionaryWrapper.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDictionaryWrapper.dia"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDictionaryWrapper.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDictionaryWrapper.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDictionaryWrapper.o"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Extensions/JSONDecoder+Extensions.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDecoder+Extensions.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDecoder+Extensions.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDecoder+Extensions.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONDecoder+Extensions.dia"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/ImageWrapper.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/ImageWrapper.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/ImageWrapper.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/ImageWrapper.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/ImageWrapper.dia"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/MemoryCapsule.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MemoryCapsule.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MemoryCapsule.dia"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MemoryCapsule.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MemoryCapsule.o"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Storage/HybridStorage.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/HybridStorage.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/HybridStorage.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/HybridStorage.dia"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/HybridStorage.d"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/JSONArrayWrapper.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONArrayWrapper.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONArrayWrapper.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONArrayWrapper.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/JSONArrayWrapper.swiftdeps"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/MD5.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MD5.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MD5.o"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MD5.dia"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/MD5.d"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Storage/KeyObservationRegistry.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/KeyObservationRegistry.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/KeyObservationRegistry.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/KeyObservationRegistry.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/KeyObservationRegistry.o"

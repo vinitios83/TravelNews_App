@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "4cfdcb6fd4b26c4ef3370186adc415933bb0e1383101fe156700c82602625177"
+build_start_time: [1669201953, 331475019]
+build_end_time: [1669201963, 234740972]
+inputs:
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/HLSCachingReverseProxyServer/Sources/HLSCachingReverseProxyServer/HLSCachingReverseProxyServer.swift"
+  : [1669197295, 770183563]

@@ -1,0 +1,167 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "1359f88a8f0689bba084d5b1664157698ef57ac2b24946b76350e192fc616290"
+build_start_time: [1669201944, 142752170]
+build_end_time: [1669201959, 379510879]
+inputs:
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/ContextMenuOptions.swift"
+  : [1669196757, 700892448]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/CredentialDatabase.swift"
+  : [1669196757, 741524219]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/CustomeSchemeHandler.swift"
+  : [1669196757, 853024482]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/FlutterMethodCallDelegate.swift"
+  : [1669196757, 701508522]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebView.swift"
+  : [1669196757, 718636512]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebViewManager.swift"
+  : [1669196757, 719378471]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/HttpAuthenticationChallenge.swift"
+  : [1669196757, 749555826]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppBrowser/InAppBrowserDelegate.swift"
+  : [1669196757, 782195568]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppBrowser/InAppBrowserManager.swift"
+  : [1669196757, 765733718]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppBrowser/InAppBrowserNavigationController.swift"
+  : [1669196757, 780914783]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppBrowser/InAppBrowserOptions.swift"
+  : [1669196757, 757798433]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppBrowser/InAppBrowserWebViewController.swift"
+  : [1669196757, 773494720]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebView/FlutterWebViewController.swift"
+  : [1669196757, 672023296]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebView/FlutterWebViewFactory.swift"
+  : [1669196757, 664754152]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebView/InAppWebView.swift"
+  : [1669196757, 657534599]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebView/InAppWebViewOptions.swift"
+  : [1669196757, 678995370]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebViewMethodHandler.swift"
+  : [1669196757, 748748779]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/InAppWebViewStatic.swift"
+  : [1669196757, 828794479]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/LeakAvoider.swift"
+  : [1669196757, 844221591]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/MyCookieManager.swift"
+  : [1669196757, 686066150]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/MyWebStorageManager.swift"
+  : [1669196757, 710998535]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Options.swift"
+  : [1669196757, 835733652]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PlatformUtil.swift"
+  : [1669196757, 851772069]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/CallAsyncJavaScriptBelowIOS14WrapperJS.swift"
+  : [1669196757, 720002889]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/ConsoleLogJS.swift"
+  : [1669196757, 726079463]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/EnableViewportScaleJS.swift"
+  : [1669196757, 730376005]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/FindElementsAtPointJS.swift"
+  : [1669196757, 721712112]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/FindTextHighlightJS.swift"
+  : [1669196757, 725145578]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/InterceptAjaxRequestJS.swift"
+  : [1669196757, 732289314]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/InterceptFetchRequestJS.swift"
+  : [1669196757, 728292942]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/JavaScriptBridgeJS.swift"
+  : [1669196757, 727346181]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/LastTouchedAnchorOrImageJS.swift"
+  : [1669196757, 731179952]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OnLoadResourceJS.swift"
+  : [1669196757, 724302053]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OnWindowBlurEventJS.swift"
+  : [1669196757, 731511116]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OnWindowFocusEventJS.swift"
+  : [1669196757, 723476409]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/OriginalViewPortMetaTagContentJS.swift"
+  : [1669196757, 729579687]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/PluginScriptsUtil.swift"
+  : [1669196757, 721196651]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/PrintJS.swift"
+  : [1669196757, 730787515]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/PromisePolyfillJS.swift"
+  : [1669196757, 729148387]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/SupportZoomJS.swift"
+  : [1669196757, 729997873]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/WebMessageChannelJS.swift"
+  : [1669196757, 726641178]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/WebMessageListenerJS.swift"
+  : [1669196757, 731910467]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PluginScriptsJS/WindowIdJS.swift"
+  : [1669196757, 720551967]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PullToRefresh/PullToRefreshControl.swift"
+  : [1669196757, 655422687]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PullToRefresh/PullToRefreshDelegate.swift"
+  : [1669196757, 653207778]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/PullToRefresh/PullToRefreshOptions.swift"
+  : [1669196757, 654096841]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/SafariViewController/ChromeSafariBrowserManager.swift"
+  : [1669196757, 803882360]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/SafariViewController/SafariBrowserOptions.swift"
+  : [1669196757, 811446666]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/SafariViewController/SafariViewController.swift"
+  : [1669196757, 820190906]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/SwiftFlutterPlugin.swift"
+  : [1669196757, 750423908]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/ClientCertChallenge.swift"
+  : [1669196757, 801194667]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/DownloadStartRequest.swift"
+  : [1669196757, 797799110]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/HitTestResult.swift"
+  : [1669196757, 800791740]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/NSAttributedString.swift"
+  : [1669196757, 798532247]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/PluginScript.swift"
+  : [1669196757, 791186809]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/SecCertificate.swift"
+  : [1669196757, 796193122]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/ServerTrustChallenge.swift"
+  : [1669196757, 795850515]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/Size2D.swift"
+  : [1669196757, 799589633]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/SslCertificate.swift"
+  : [1669196757, 799929857]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/SslError.swift"
+  : [1669196757, 803433418]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/UIColor.swift"
+  : [1669196757, 801495552]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/URLAuthenticationChallenge.swift"
+  : [1669196757, 799219608]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/URLCredential.swift"
+  : [1669196757, 800215721]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/URLProtectionSpace.swift"
+  : [1669196757, 795336961]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/URLRequest.swift"
+  : [1669196757, 803011178]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/URLResponse.swift"
+  : [1669196757, 800498247]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/UserScript.swift"
+  : [1669196757, 802129268]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WKContentWorld.swift"
+  : [1669196757, 792346000]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WKFrameInfo.swift"
+  : [1669196757, 793298721]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WKNavigationAction.swift"
+  : [1669196757, 794854879]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WKNavigationResponse.swift"
+  : [1669196757, 794323205]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WKSecurityOrigin.swift"
+  : [1669196757, 802531242]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WKUserContentController.swift"
+  : [1669196757, 797408580]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WKWindowFeatures.swift"
+  : [1669196757, 798877954]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WebMessage.swift"
+  : [1669196757, 792876005]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WebMessageChannel.swift"
+  : [1669196757, 798135519]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WebMessageListener.swift"
+  : [1669196757, 793860435]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WebMessagePort.swift"
+  : [1669196757, 791836500]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Types/WebViewTransport.swift"
+  : [1669196757, 801797866]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/Util.swift"
+  : [1669196757, 709624290]
+  ? "/Users/mehulpanchal/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.1+2/ios/Classes/WKProcessPoolManager.swift"
+  : [1669196757, 732657432]

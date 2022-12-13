@@ -1,0 +1,40 @@
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/TransformerFactory.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TransformerFactory.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TransformerFactory.dia"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TransformerFactory.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TransformerFactory.o"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/StorageError.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageError.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageError.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageError.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageError.dia"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/Types.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Types.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Types.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Types.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Types.swiftdeps"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Storage/StorageObservationRegistry.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageObservationRegistry.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageObservationRegistry.dia"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageObservationRegistry.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/StorageObservationRegistry.o"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/TypeWrapper.swift":
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TypeWrapper.dia"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TypeWrapper.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TypeWrapper.d"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/TypeWrapper.swiftdeps"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Library/Transformer.swift":
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Transformer.d"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Transformer.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Transformer.swiftdeps"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/Transformer.dia"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/iOS/UIImage+Extensions.swift":
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/UIImage+Extensions.swiftdeps"
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/UIImage+Extensions.o"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/UIImage+Extensions.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/UIImage+Extensions.dia"
+"/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Cache/Source/Shared/Storage/SyncStorage.swift":
+  object: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/SyncStorage.o"
+  swift-dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/SyncStorage.swiftdeps"
+  dependencies: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/SyncStorage.d"
+  diagnostics: "/Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/Cache.build/Objects-normal/x86_64/SyncStorage.dia"

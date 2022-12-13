@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "196473631952",
+    "project_id": "two-app-ebaee",
+    "storage_bucket": "two-app-ebaee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196473631952:android:3138f6303ebb929ed91ad5",
+        "android_client_info": {
+          "package_name": "com.example.travelworldonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196473631952-pgombs9vltupe44o5hp4bp7aoiatkhkd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.travelworldonline",
+            "certificate_hash": "1046460022dea2afc498d370de38a44cc3981a7e"
+          }
+        },
+        {
+          "client_id": "196473631952-2n15mfd84cbk58qopr1mutihkdg7hlgm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUav7fwvQTHrR4fIRaJCtYDL25dKBCgSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196473631952-2n15mfd84cbk58qopr1mutihkdg7hlgm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

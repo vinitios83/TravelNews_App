@@ -1,0 +1,53 @@
+dependencies: \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.m \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/FirebaseInstallations.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromises.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/PromisesObjC.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Wrap.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Validate.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Timeout.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Then.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Testing.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Retry.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Reduce.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Recover.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Race.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Do.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Delay.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Catch.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Await.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Async.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Any.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Always.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromiseError.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+All.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/PromisesObjC/PromisesObjC-umbrella.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FirebaseCoreInternal.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FirebaseCore.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRLoggerLevel.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRConfiguration.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRAppInternal.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRComponent.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRComponentContainer.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRComponentType.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRCoreDiagnosticsConnector.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRDependency.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRHeartbeatInfo.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRHeartbeatLogger.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRLibrary.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIRLogger.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseCore/Extension/FIROptionsInternal.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsErrors.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsLogger.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsItem.h \
+  /Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsStatus.h

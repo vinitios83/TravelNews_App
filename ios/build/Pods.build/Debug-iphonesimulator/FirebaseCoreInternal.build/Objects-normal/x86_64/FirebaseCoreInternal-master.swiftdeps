@@ -1,0 +1,27 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "3534aba8cc6059c5aa4ea3ea25521dd7871656f52bcf46225f96a96ccf784e66"
+build_start_time: [1669201960, 868566989]
+build_end_time: [1669201964, 546859025]
+inputs:
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift"
+  : [1669197227, 675130605]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift"
+  : [1669197227, 675832271]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift"
+  : [1669197227, 676468372]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift"
+  : [1669197227, 676671266]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift"
+  : [1669197227, 677200317]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift"
+  : [1669197227, 675328493]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift"
+  : [1669197227, 674807548]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift"
+  : [1669197227, 677569866]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift"
+  : [1669197227, 677010774]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
+  : [1669197227, 675537347]
+  ? "/Users/mehulpanchal/Downloads/travel_app-main/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift"
+  : [1669197227, 676266670]
