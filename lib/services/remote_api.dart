@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:travel_app/models/CampusDataModel.dart';
 import 'package:travel_app/models/tourism_PPP.dart';
 import 'package:travel_app/models/travel_ppp.dart';
 import '../models/ads_model.dart';
@@ -130,4 +131,45 @@ class RemoteApi {
     }
     return null;
   }
+  Future<CampusCategoryList?> getCampusCategoryList() async {
+    try {
+      var response = await Dio().get(AppConstants.getCampusCategoryList);
+      if (response.statusCode == 200) {
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  Future<CampusCategoryList?> getSubCanpusCategory(categoryid) async {
+    try {
+      var response = await Dio().get(
+        'https://travelworldonline.in/travelvideojson/videosubcat/?id=$categoryid');
+              print(response);
+      if (response.statusCode == 200) {
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  Future<CampusCategoryList?> getCanpusCategoryVideoList(categoryid,subCategoryid) async {
+    try {
+      var response = await Dio().get(
+        'https://travelworldonline.in/travelvideojson/campusvideo/?catid=$categoryid&subcatid=$subCategoryid');
+              print(response);
+      if (response.statusCode == 200) {
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  
 }

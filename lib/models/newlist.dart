@@ -73,7 +73,7 @@ class ArticleList {
         hotnews:
             List<Hotnew>.from(json["Hotnews"].map((x) => Hotnew.fromJson(x))),
       );
-
+  
   Map<String, dynamic> toJson() => {
         "CDate": cDate,
         "jsonno": jsonno,

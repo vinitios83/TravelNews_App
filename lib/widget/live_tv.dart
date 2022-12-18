@@ -1,5 +1,7 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:chewie/chewie.dart';
+import 'package:video_player/video_player.dart';
 
 class LiveTvPage extends StatefulWidget {
   const LiveTvPage({
@@ -12,37 +14,48 @@ class LiveTvPage extends StatefulWidget {
 }
 
 class _LiveTvPageState extends State<LiveTvPage> {
-  late BetterPlayerController _betterPlayerController;
+//    late BetterPlayerController _betterPlayerController;
+  late ChewieController chewieController;
 
   @override
   void initState() {
-    BetterPlayerConfiguration betterPlayerConfiguration =
-        const BetterPlayerConfiguration(
-      showPlaceholderUntilPlay: true,
-      placeholder: Image(image: AssetImage('assets/tv.jpeg')),
-      
-      aspectRatio: 16 / 9,
-      fit: BoxFit.contain,
-      autoDetectFullscreenDeviceOrientation: true,
-      autoPlay: false,
-      allowedScreenSleep: false,
-      autoDispose: true,
-      expandToFill: true,
-      fullScreenByDefault: false,
-    );
-    BetterPlayerDataSource dataSource = BetterPlayerDataSource(
-      BetterPlayerDataSourceType.network,
-      widget.url,
-    );
-    _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
-    _betterPlayerController.setupDataSource(dataSource);
+    // BetterPlayerConfiguration betterPlayerConfiguration =
+    //     const BetterPlayerConfiguration(
+    //   showPlaceholderUntilPlay: true,
+    //   placeholder: Image(image: AssetImage('assets/tv.jpeg')),
+    //   aspectRatio: 16 / 9,
+    //   fit: BoxFit.contain,
+    //   autoDetectFullscreenDeviceOrientation: true,
+    //   autoPlay: true,
+    //   allowedScreenSleep: false,
+    //   autoDispose: true,
+    //   expandToFill: true,
+    //   fullScreenByDefault: false,
+    // );
+    // BetterPlayerDataSource dataSource = BetterPlayerDataSource(
+    //   BetterPlayerDataSourceType.network,
+    //   widget.url,
+    // );
+    // _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
+    // _betterPlayerController.setupDataSource(dataSource);
     super.initState();
+    chewieController = ChewieController(
+      videoPlayerController: VideoPlayerController.network(
+      widget.url),
+      placeholder: Image(image: AssetImage('assets/tv.jpeg')),
+      aspectRatio: 16 / 9,
+      autoPlay: true,
+      allowedScreenSleep:false,
+      looping: true,
+    );
   }
 
   @override
   void dispose() {
-    _betterPlayerController.dispose();
     super.dispose();
+    // _betterPlayerController.dispose();
+    chewieController.pause();
+    chewieController.dispose();
   }
 
   @override
@@ -50,7 +63,8 @@ class _LiveTvPageState extends State<LiveTvPage> {
     return Center(
       child: AspectRatio(
         aspectRatio: 16 / 9,
-        child: BetterPlayer(controller: _betterPlayerController),
+        child: Chewie(controller: chewieController),
+        // child: BetterPlayer(controller: _betterPlayerController),
       ),
     );
   }

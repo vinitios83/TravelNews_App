@@ -454,19 +454,103 @@ class _AssociationPageState extends State<AssociationPage>
                         child: PageView(
                           controller: seccontroller,
                           children: [
-                            const AssociationList(),
-                            Container(
-                              color: Colors.amber,
+                            const AssociationList(selectedTabName: 'National',),
+                            const AssociationList(selectedTabName: 'Regional'),
+                            const AssociationList(selectedTabName: 'International'),
+                            Padding(padding: EdgeInsets.only(top: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                              child: InkWell(
+                              onTap: (() {
+                                seccontroller.animateToPage(0,
+                                    duration: const Duration(seconds: 1),
+                                    curve: Curves.easeInOut);
+                                setState(() {
+                                  this.subPage = 0;
+                                });
+                              }),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(4),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4.0,
+                                            spreadRadius: 1.0,
+                                            color: Style.appbarcolor,
+                                          )
+                                        ],
+                                      ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 4, horizontal: 8),
+                                  child: Text(
+                                    'Sign In',
+                                    style: TextStyle(
+                                        color: Style.tabbarfontcolor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              ),
                             ),
-                            Container(
-                              color: Colors.blueAccent,
                             ),
-                            Container(
-                              color: Colors.brown,
+                            const Divider(
+                                height: 8,
+                              ),
+                            const Image(image: AssetImage('assets/imgBuyer.jpeg'))
+                              ],
                             ),
-                            Container(
-                              color: Colors.cyan,
-                            )
+                            ),
+                            Padding(padding: EdgeInsets.only(top: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                              child: InkWell(
+                              onTap: (() {
+                                seccontroller.animateToPage(0,
+                                    duration: const Duration(seconds: 1),
+                                    curve: Curves.easeInOut);
+                                setState(() {
+                                  this.subPage = 0;
+                                });
+                              }),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(4),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4.0,
+                                            spreadRadius: 1.0,
+                                            color: Style.appbarcolor,
+                                          )
+                                        ],
+                                      ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 4, horizontal: 8),
+                                  child: Text(
+                                    'Sign In',
+                                    style: TextStyle(
+                                        color: Style.tabbarfontcolor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            ),
+                            const Divider(
+                                height: 8,
+                              ),
+                            const Image(image: AssetImage('assets/imgSeller.jpeg'))
+                              ],
+                            ),
+                            ),
                           ],
                           onPageChanged: (value) {
                             setState(() {
@@ -477,15 +561,78 @@ class _AssociationPageState extends State<AssociationPage>
                       )
                     ],
                   ),
-                  const Center(
-                    child: Text("Coming Soon"),
-                  ),
-                  const Center(
-                    child: Text("Coming Soon"),
-                  ),
-                  Container(
-                    color: Colors.cyan,
-                  )
+                  Padding(padding: EdgeInsets.only(top: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                              child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 4, horizontal: 8),
+                                  child: Text(
+                                    'Coming Soon',
+                                    style: TextStyle(
+                                        color: Style.tabbarfontcolor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                            ),
+                            const Divider(
+                                height: 8,
+                              ),
+                            const Image(image: AssetImage('assets/imgForex.jpeg'))
+                              ],
+                            ),
+                            ),
+                  Padding(padding: EdgeInsets.only(top: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                              child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 4, horizontal: 8),
+                                  child: Text(
+                                    'Coming Soon',
+                                    style: TextStyle(
+                                        color: Style.tabbarfontcolor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                            ),
+                            const Divider(
+                                height: 8,
+                              ),
+                            const Image(image: AssetImage('assets/imgInsurance.jpeg'))
+                              ],
+                            ),
+                            ),
+                  Padding(padding: EdgeInsets.only(top: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                              child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 4, horizontal: 8),
+                                  child: Text(
+                                    'Coming Soon',
+                                    style: TextStyle(
+                                        color: Style.tabbarfontcolor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                            ),
+                            const Divider(
+                                height: 8,
+                              ),
+                            const Image(image: AssetImage('assets/imgSpecialOffer.jpeg'))
+                              ],
+                            ),
+                            ),
                 ],
               ),
             )
@@ -495,8 +642,9 @@ class _AssociationPageState extends State<AssociationPage>
 }
 
 class AssociationList extends StatefulWidget {
+  final String selectedTabName;
   const AssociationList({
-    Key? key,
+    Key? key,required this.selectedTabName
   }) : super(key: key);
 
   @override
@@ -517,6 +665,7 @@ class _AssociationListState extends State<AssociationList> {
     // final AssociationController associationController = Get.find();
     final AssociationController associationController =
         Get.put(AssociationController());
+        associationController.selectedAType.value = widget.selectedTabName;
     // associationController.selectedAType.value == 'National';
     return SizedBox(
       height: 100,
@@ -778,13 +927,30 @@ class _AssociationTileState extends State<AssociationTile> {
                                 widget._association.name,
                               );
                             },
-                            child: const Text(
-                              'Sign Out',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 14,
+                            child: Container(
+                                decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(4),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4.0,
+                                            spreadRadius: 1.0,
+                                            color: Style.appbarcolor,
+                                          )
+                                        ],
+                                      ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 4, horizontal: 8),
+                                  child: Text(
+                                    'Sign Out',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
                               ),
-                            ),
                           )
                         : InkWell(
                             onTap: () {
@@ -802,15 +968,32 @@ class _AssociationTileState extends State<AssociationTile> {
                                 );
                               }
                             },
-                            child: Text(
-                              (widget._association.name != 'FAITH')
+                            child:Container(
+                                decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(4),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4.0,
+                                            spreadRadius: 1.0,
+                                            color: Style.appbarcolor,
+                                          )
+                                        ],
+                                      ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 4, horizontal: 8),
+                                  child: Text(
+                                    (widget._association.name != 'FAITH')
                                   ? 'SIGN IN'
                                   : 'B2B IN',
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
+                                    style: TextStyle(
+                                        color: Style.tabbarfontcolor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
                               ),
-                            ),
                           ),
                   ),
                 ),

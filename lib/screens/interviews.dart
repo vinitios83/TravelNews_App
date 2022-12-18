@@ -160,6 +160,9 @@ class Videos extends StatelessWidget {
       itemCount: mylist.length,
       itemBuilder: (context, index) {
         Newsbulletin newsbulletin = mylist[index];
+        String title = newsbulletin.videotitle;
+        print('News Title === $title');
+        
         return YouTubeTile(
           id: newsbulletin.video,
           title: newsbulletin.videotitle,

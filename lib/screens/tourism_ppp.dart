@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:full_screen_image_null_safe/full_screen_image_null_safe.dart';
-import 'package:get/get.dart';
+
 import 'package:travel_app/models/Text_PPPData.dart';
 import 'package:travel_app/models/checknulData.dart';
 import 'package:travel_app/models/SliderLinkData.dart';
@@ -10,6 +10,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:travel_app/screens/ppp_home.dart';
 import 'package:travel_app/widget/pdfViewer.dart';
 import 'package:travel_app/utility/colors.dart';
+import 'package:get/get.dart';
 import 'package:travel_app/widget/live_tv.dart';
 import 'package:travel_app/widget/my_banners_ads.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -138,7 +139,7 @@ class _TourismPPPState extends State<TourismPPP> {
         bottomNavigationBar: const MyBannerAds(),
         appBar: AppBar(
           title: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.95,
+            // width: MediaQuery.of(context).size.width * 0.95,
             child: Row(
               children: [
                 const Text(
@@ -146,18 +147,17 @@ class _TourismPPPState extends State<TourismPPP> {
                   style: TextStyle(
                       color: Style.appbarfontcolor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 28),
+                      fontSize: 25),
                 ),
+                Spacer(),
                 const Text(
-                  '  PPP',
+                  'PPP',
                   style: TextStyle(
                       color: Style.appbarpagecolor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 28),
+                      fontSize: 25),
                 ),
-                const SizedBox(
-                  width: 5,
-                ),
+                Spacer(),
                 const Text(
                   'Directory',
                   style: TextStyle(
@@ -165,9 +165,7 @@ class _TourismPPPState extends State<TourismPPP> {
                       fontWeight: FontWeight.bold,
                       fontSize: 14),
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
+                Spacer(),
                 GestureDetector(
                   onTap: () {
                     _launchUrl(
@@ -189,6 +187,7 @@ class _TourismPPPState extends State<TourismPPP> {
                 Get.off(const PPPHome());
               },
               icon: const Icon(Icons.arrow_back)),
+          leadingWidth: 30,
           backgroundColor: Style.appbarcolor,
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(300.0),
@@ -208,57 +207,71 @@ class _TourismPPPState extends State<TourismPPP> {
                       children: [
                         Container(
                           alignment: Alignment.center,
-                          height: 35,
+                          height: 50,
                           width: MediaQuery.of(context).size.width,
                           decoration:
                               const BoxDecoration(color: Style.backgroundcolor),
-                          child: ListView.separated(
+                          child: Padding(padding: EdgeInsets.all(5),
+                            child: ListView.separated(
                               shrinkWrap: true,
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 10),
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (BuildContext context, int index) {
                                 Color textcolor = Style.primaryfontcolor;
-                                if (maintabselectedindex == index) {
-                                  textcolor = Style.selectedmaintabbarcolor;
-                                } else {
-                                  textcolor = Style.primaryfontcolor;
-                                }
-                                return InkWell(
-                                    onTap: (() {
-                                      setState(() {
-                                        maintabselectedindex = index;
-                                        othertabselectedindex = 0;
-                                        setotherbar();
-                                      });
-                                    }),
+                                return Padding(padding: EdgeInsets.only(top: 5,bottom: 5),
+                                child: InkWell(
+                                  onTap: (() {
+                                    setState(() {
+                                      maintabselectedindex = index;
+                                      othertabselectedindex = 0;
+                                      setotherbar();
+                                    });
+                                  }),
+                                  child: Container(
+                                    decoration: (maintabselectedindex == index)
+                                        ? BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 4.0,
+                                                spreadRadius: 1.0,
+                                                color: Style.appbarcolor,
+                                              )
+                                            ],
+                                          )
+                                        : BoxDecoration(),
                                     child: Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          vertical: 5),
+                                          vertical: 4, horizontal: 8),
                                       child: Text(
                                           maintab[index]["value"].toString(),
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: textcolor,
-                                              fontSize: 18,
+                                              fontSize: 16,
                                               letterSpacing: 0.2,
                                               fontFamily: 'Economica Bold',
                                               fontWeight: FontWeight.w500)),
-                                    ));
+                                    ),
+                                  ),
+                                ),
+                                );
                               },
                               separatorBuilder:
                                   (BuildContext context, int index) {
                                 return const VerticalDivider(
-                                    thickness: 2,
-                                    endIndent: 7,
-                                    indent: 7,
-                                    color: Style.verticaldividercolor);
+                                  width: 8,
+                                );
                               },
                               itemCount: maintab.length),
+                          ),
                         ),
                         Container(
                           alignment: Alignment.center,
-                          height: 35,
+                          height: 40,
                           width: MediaQuery.of(context).size.width,
                           decoration: const BoxDecoration(
                               color: Style.marqueebackgroundcolor),
@@ -268,39 +281,57 @@ class _TourismPPPState extends State<TourismPPP> {
                                   const EdgeInsets.symmetric(horizontal: 10),
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (BuildContext context, int index) {
-                                Color textcolor = Style.appbarfontcolor;
+                                Color textcolor = Style.primaryfontcolor;
                                 if (othertabselectedindex == index) {
-                                  textcolor = Style.selectedbelowtabbarcolor;
+                                  textcolor = Style.primaryfontcolor;
                                 } else {
                                   textcolor = Style.appbarfontcolor;
                                 }
-                                return InkWell(
-                                    onTap: (() {
-                                      setState(() {
+                              return Padding(padding: EdgeInsets.only(top: 5,bottom: 5),
+                                child: InkWell(
+                                  onTap: (() {
+                                    setState(() {
                                         othertabselectedindex = index;
                                         setcontent();
                                       });
                                     }),
+                                  child: Container(
+                                    decoration: (othertabselectedindex == index)
+                                        ? BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 4.0,
+                                                spreadRadius: 1.0,
+                                                color: Style.appbarcolor,
+                                              )
+                                            ],
+                                          )
+                                        : BoxDecoration(),
                                     child: Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          vertical: 10),
+                                          vertical: 4, horizontal: 8),
                                       child: Text(
                                           othertab[index]["value"].toString(),
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: textcolor,
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.bold,
-                                              fontFamily: 'Economica')),
-                                    ));
+                                              fontSize: 16,
+                                              letterSpacing: 0.2,
+                                              fontFamily: 'Economica Bold',
+                                              fontWeight: FontWeight.w500)),
+                                    ),
+                                  ),
+                                ),
+                                );
                               },
                               separatorBuilder:
                                   (BuildContext context, int index) {
                                 return const VerticalDivider(
-                                    thickness: 2,
-                                    endIndent: 7,
-                                    indent: 7,
-                                    color: Style.verticaldividercolor);
+                                    width: 8,
+                                    );
                               },
                               itemCount: othertab.length),
                         ),

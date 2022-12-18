@@ -40,4 +40,6 @@ abstract class AppConstants {
   static const fallBackLogo = 'assets/fall_back.jpg';
 
   static const adsBaseUrl = 'https://travelworldonline.in/app_ads/';
+
+  static const getCampusCategoryList = 'https://travelworldonline.in/travelvideojson/videocat/';
 }

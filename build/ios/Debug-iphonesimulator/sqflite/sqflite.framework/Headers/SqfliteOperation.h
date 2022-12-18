@@ -4,11 +4,12 @@
 //
 //  Created by Alexandre Roux on 09/01/2018.
 //
-#import "SqflitePlugin.h"
-
 #ifndef SqfliteOperation_h
 #define SqfliteOperation_h
 
+#import "SqfliteImport.h"
+
+@class FMDatabase;
 @interface SqfliteOperation : NSObject
 
 - (NSString*)getMethod;

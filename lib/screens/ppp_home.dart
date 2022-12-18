@@ -38,6 +38,7 @@ class _PPPHomeState extends State<PPPHome> {
   String Iimg = "";
   String? selectedValue;
   String selectedid = "1";
+  int selectedTopOption = 0;
   final TextEditingController textEditingController = TextEditingController();
 
   @override
@@ -110,14 +111,14 @@ class _PPPHomeState extends State<PPPHome> {
               style: TextStyle(
                   color: Style.appbarfontcolor,
                   fontWeight: FontWeight.bold,
-                  fontSize: 30),
+                  fontSize: 28),
             ),
             Text(
-              '  PPP',
+              ' PPP',
               style: TextStyle(
                   color: Style.appbarpagecolor,
                   fontWeight: FontWeight.bold,
-                  fontSize: 30),
+                  fontSize: 28),
             ),
           ],
         ),
@@ -152,72 +153,71 @@ class _PPPHomeState extends State<PPPHome> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                        onTap: (() {
-                          setState(() {
-                            getinternational();
-                          });
-                        }),
-                        
-                                child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(4),
-                boxShadow: const [
-                  BoxShadow(
-                    blurRadius: 4.0,
-                    spreadRadius: 1.0,
-                    color: Style.appbarcolor,
-                  )
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                child: Text(
-                  'International Tourism Boards',
-                  style: TextStyle(
-                      color: Style.tabbarfontcolor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400),
-                ),
-              ),
-            ),
-                                ),
+                      onTap: (() {
+                        setState(() {
+                          selectedTopOption = 0;
+                          getinternational();
+                        });
+                      }),
+                      child: Container(
+                        decoration: (selectedTopOption == 0) ? BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(4),
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 4.0,
+                              spreadRadius: 1.0,
+                              color: Style.appbarcolor,
+                            )
+                          ],
+                        ) : BoxDecoration(),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 4, horizontal: 8),
+                          child: Text(
+                            'International Tourism Boards',
+                            style: TextStyle(
+                                color: Style.tabbarfontcolor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                      ),
+                    ),
                     const VerticalDivider(
-                        thickness: 2,
-                        endIndent: 7,
-                        indent: 7,
-                        color: Style.othertabbarcolor),
+                        width: 8),
                     InkWell(
-                        onTap: (() {
-                          setState(() {
-                            getdomestc();
-                          });
-                        }),
-                        
-                                child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(4),
-                boxShadow: const [
-                  BoxShadow(
-                    blurRadius: 4.0,
-                    spreadRadius: 1.0,
-                    color: Style.appbarcolor,
-                  )
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                child: Text(
-                  'Domestic Tourism Boards',
-                  style: TextStyle(
-                      color: Style.tabbarfontcolor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400),
-                ),
-              ),
-            ),
-                                ),
+                      onTap: (() {
+                        setState(() {
+                          selectedTopOption = 1;
+                          getdomestc();
+                        });
+                      }),
+                      child: Container(
+                        decoration: (selectedTopOption == 1) ? BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(4),
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 4.0,
+                              spreadRadius: 1.0,
+                              color: Style.appbarcolor,
+                            )
+                          ],
+                        ) : BoxDecoration(),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 4, horizontal: 8),
+                          child: Text(
+                            'Domestic Tourism Boards',
+                            style: TextStyle(
+                                color: Style.tabbarfontcolor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

@@ -361,13 +361,13 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
             child: PageView(
               controller: controller,
               children: [
-                MyList(mylist: widget.hotels),
-                MyList(mylist: widget.travel),
+                MyList(mylist: widget.hotels,onChanged:(value) {},isPlayTV:true,),
+                MyList(mylist: widget.travel,onChanged:(value) {},isPlayTV:true,),
                 MyList(
-                  mylist: widget.airlines,
+                  mylist: widget.airlines,onChanged:(value) {},isPlayTV:true,
                 ),
-                MyList(mylist: widget.tourism),
-                MyList(mylist: widget.miscellaneous),
+                MyList(mylist: widget.tourism,onChanged:(value) {},isPlayTV:true,),
+                MyList(mylist: widget.miscellaneous,onChanged:(value) {},isPlayTV:true,),
               ],
               onPageChanged: (value) {
                 setState(() {

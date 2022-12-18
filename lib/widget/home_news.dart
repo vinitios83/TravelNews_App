@@ -13,26 +13,35 @@ class ArticleTile extends StatelessWidget {
     Key? key,
     required this.index,
     required this.list,
+    required this.onChanged,
+    required this.isPlayTV,
   }) : super(key: key);
 
   final int index;
   final List<Hotnew> list;
 
+final ValueChanged<bool> onChanged;
+final bool isPlayTV;
+void _handleTap() {
+    onChanged(false);
+  }
   @override
   Widget build(BuildContext context) {
     bool isNew =
         ('${DateTime.now().month}/${DateTime.now().day}/${DateTime.now().year}' ==
             list[index].createdt.split(' ')[0]);
     return GestureDetector(
-      onTap: () => Navigator.push(
+      onTap: (() {
+        this._handleTap();
+        Navigator.push(
         context,
         MaterialPageRoute(
           builder: (ctx) => NewsDetailPage(
             hotnew: list,
             index: index,
           ),
-        ),
-      ),
+        ),);
+      }),
       child: Stack(
         children: [
           Container(

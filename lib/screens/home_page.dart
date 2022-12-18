@@ -4,6 +4,7 @@ import 'package:travel_app/screens/b2b.dart';
 import 'package:travel_app/screens/interviews.dart';
 import 'package:travel_app/screens/news.dart';
 import 'package:travel_app/screens/ppp_home.dart';
+import 'package:travel_app/screens/Campus_Page.dart';
 import 'package:travel_app/utility/colors.dart';
 import 'package:travel_app/widget/app_drawer.dart';
 import 'package:travel_app/widget/my_banners_ads.dart';
@@ -29,10 +30,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   RxBool isTv = true.obs;
-
+  bool isPlayTV = false;
   List<Hotnew> myList = [];
   final RemoteApi _remoteApi = RemoteApi();
   HomeTickerController tickerController = Get.put(HomeTickerController());
+
+void _handlePushFromList(bool newValue) {
+    setState(() {
+      isPlayTV = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,15 +72,40 @@ class _HomePageState extends State<HomePage> {
             preferredSize: const Size.fromHeight(230.0),
             child: Obx((() {
               if (isTv.value == true) {
-                return Column(
-                  children: [
-                    Container(
-                      height: 1.5,
-                      color: Style.dividercolor,
-                    ),
-                    const LiveTvPage(url: AssetsHelper.liveTVUrl),
-                  ],
-                );
+                if (this.isPlayTV == false) {
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        this.isPlayTV = true;
+                      });
+                    },
+                    child: SizedBox(
+                        height: 230,
+                        child: Stack(
+                          children: [
+                            const Image(image: AssetImage('assets/tv.jpeg')),
+                            Positioned(
+                                top: MediaQuery.of(context).size.height * 0.1,
+                                right: MediaQuery.of(context).size.width * 0.45,
+                                child: const Icon(
+                                  Icons.play_arrow,
+                                  size: 50,
+                                  color: Colors.white,
+                                ))
+                          ],
+                        )),
+                  );
+                } else {
+                  return Column(
+                    children: [
+                      Container(
+                        height: 1.5,
+                        color: Style.dividercolor,
+                      ),
+                      const LiveTvPage(url: AssetsHelper.liveTVUrl),
+                    ],
+                  );
+                }
               } else {
                 return Column(
                   children: const [
@@ -121,6 +154,9 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            this.isPlayTV = false;
+                          });
                           Get.to(const NewsList());
                         },
                         child: Container(
@@ -155,6 +191,9 @@ class _HomePageState extends State<HomePage> {
                           color: Style.othertabbarcolor),
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            this.isPlayTV = false;
+                          });
                           Get.to(const YouTubeListPage());
                         },
                         child: Container(
@@ -189,6 +228,9 @@ class _HomePageState extends State<HomePage> {
                           color: Style.othertabbarcolor),
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            this.isPlayTV = false;
+                          });
                           Get.to(const AssociationPage());
                         },
                         child: Container(
@@ -224,6 +266,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            this.isPlayTV = false;
+                          });
                           Get.to(const PPPHome());
                         },
                         child: Container(
@@ -259,7 +304,10 @@ class _HomePageState extends State<HomePage> {
                       ),
                       InkWell(
                         onTap: () {
-                          // Get.to(const PPPHome());
+                          setState(() {
+                            this.isPlayTV = false;
+                          });
+                          Get.to(const CapmusPage());
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -294,6 +342,8 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.all(10.0),
                     child: MyList(
                       mylist: myList,
+                      isPlayTV: true,
+                      onChanged: _handlePushFromList,
                     ),
                   ),
                 ),
@@ -310,9 +360,13 @@ class MyList extends StatefulWidget {
   const MyList({
     Key? key,
     required this.mylist,
+    required this.onChanged,
+    required this.isPlayTV,
   }) : super(key: key);
 
   final List<Hotnew> mylist;
+  final ValueChanged<bool> onChanged;
+  final bool isPlayTV;
 
   @override
   State<MyList> createState() => _MyListState();
@@ -320,7 +374,9 @@ class MyList extends StatefulWidget {
 
 class _MyListState extends State<MyList> {
   int adIndex = -1;
-
+  void _handlePushFromList(bool newValue) {
+    widget.onChanged(false);
+  }
   @override
   Widget build(BuildContext context) {
     return
@@ -334,6 +390,8 @@ class _MyListState extends State<MyList> {
         return ArticleTile(
           list: widget.mylist,
           index: index,
+          onChanged: _handlePushFromList,
+          isPlayTV: widget.isPlayTV,
         );
       },
     );
