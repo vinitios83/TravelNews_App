@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_app/element/loader.dart';
+import 'package:travel_app/main.dart';
 import 'package:travel_app/utility/colors.dart';
 import 'package:travel_app/models/CampusDataModel.dart';
 import '../services/remote_api.dart';
@@ -242,6 +243,9 @@ class _CapmusPageState extends State<CapmusPage>
                               itemCount: subCampusCategoryList.length),
                         ),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                 (videoList.length == 0)
                     ? nullui()
                     : Expanded(
@@ -259,100 +263,108 @@ class _CapmusPageState extends State<CapmusPage>
                           String videoUrl = this.videoList[index].video ?? "";
                           return GestureDetector(
                             onTap: () {
-                              Get.to(YouTubePlayerPage(videoDetail: videoList[index],));
+                              Get.to(YouTubePlayerPage(
+                                videoDetail: videoList[index],
+                              ));
                               // Get.to(LiveTvPage(url: videoUrl));
                             },
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 10, right: 10, top: 15),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                            child: Card(
+                                  child: Column(
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            right: 5, bottom: 3),
-                                        child: CachedNetworkImage(
-                                          imageUrl: imageUrl,
-                                          height: 70,
-                                          width: 120,
-                                          fit: BoxFit.cover,
-                                          placeholder: (context, url) =>
-                                              SizedBox(
-                                            height: 65,
-                                            width: 120,
-                                            child: Image.asset(
-                                              AppConstants.fallBackLogo,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          errorWidget: (context, url, _) =>
-                                              SizedBox(
-                                            height: 65,
-                                            width: 120,
-                                            child: Image.asset(
-                                              AppConstants.fallBackLogo,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox(
+                                      
+                                      Row(
+                                        children: [
+                                          SizedBox(
                                         width: 5,
                                       ),
-                                      Container(
-                                        width: MediaQuery.of(context).size.width - (175),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          // mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            Text(
-                                              '$title',
-                                              overflow: TextOverflow.ellipsis,
-                                              maxLines: 1,
-                                              style: const TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Style.primaryfontcolor,
-                                                  fontFamily:
-                                                      'Calibri Regular'),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 5, bottom: 3),
+                                            child: CachedNetworkImage(
+                                              imageUrl: imageUrl,
+                                              height: 70,
+                                              width: 120,
+                                              fit: BoxFit.cover,
+                                              placeholder: (context, url) =>
+                                                  SizedBox(
+                                                height: MediaQuery.of(context)
+                                                        .size
+                                                        .height *
+                                                    0.02,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.3,
+                                                child: Image.asset(
+                                                  AppConstants.fallBackLogo,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              errorWidget: (context, url, _) =>
+                                                  SizedBox(
+                                                height: MediaQuery.of(context)
+                                                        .size
+                                                        .height *
+                                                    0.03,
+                                                width: 120,
+                                                child: Image.asset(
+                                                  AppConstants.fallBackLogo,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
                                             ),
-                                            Text(
-                                              '$detail',
-                                              overflow: TextOverflow.ellipsis,
-                                              maxLines: 2,
-                                              style: const TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: Style.primaryfontcolor,
-                                                  fontFamily:
-                                                      'Calibri Regular'),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Container(
+                                            width: MediaQuery.of(context).size.width - (175),
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              
+                                              children: [
+                                                Text(
+                                                  title,
+                                                  style: const TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: Style
+                                                          .primaryfontcolor,
+                                                      fontFamily:
+                                                          'Calibri Regular'),
+                                                ),
+                                                Text(
+                                                  detail,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  maxLines: 2,
+                                                  style: const TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Color.fromARGB(255, 72, 72, 72),
+                                                      fontFamily:
+                                                          'Calibri Regular'),
+                                                ),
+                                                
+                                              ],
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                          Icon(
+                                            Icons.keyboard_arrow_right,
+                                            size: 18,
+                                          ),
+                                        ],
                                       ),
-                                      Container(
-                                        width: 18,
-                                        child: Center(
-                                          child: Icon(
-                                        Icons.keyboard_arrow_right,
-                                        size: 18,
-                                      ),
-                                        )
+                                      const Divider(
+                                        thickness: 2,
+                                        color: Style.dividercolor,
                                       )
                                     ],
                                   ),
-                                  const Divider(
-                                    thickness: 2,
-                                    color: Style.dividercolor,
-                                  )
-                                ],
-                              ),
-                            ),
+                                ),
                           );
                         },
                       )),
@@ -362,17 +374,17 @@ class _CapmusPageState extends State<CapmusPage>
   Widget nullui() {
     if (isCallingAPI == true) {
       return buildLoadingWidget();
-    }else {
-    return const Center(
-      child: Text(
-        "Nothing to show",
-        style: TextStyle(
-            fontSize: 18,
-            color: Style.primaryfontcolor,
-            fontWeight: FontWeight.w500,
-            fontFamily: 'Economica'),
-      ),
-    );
-  }
+    } else {
+      return const Center(
+        child: Text(
+          "Nothing to show",
+          style: TextStyle(
+              fontSize: 18,
+              color: Style.primaryfontcolor,
+              fontWeight: FontWeight.w500,
+              fontFamily: 'Economica'),
+        ),
+      );
+    }
   }
 }
