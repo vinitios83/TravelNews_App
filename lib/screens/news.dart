@@ -166,18 +166,16 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
       child: Column(
         children: [
           Container(
-            height: 46,
+            height: 50,
             width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(color: Style.othertabbarcolor),
+            decoration: const BoxDecoration(color: Style.headerYellowcolor),
             child: Padding(padding: EdgeInsets.all(8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
                   onTap: (() {
-                    controller.animateToPage(0,
-                        duration: const Duration(seconds: 1),
-                        curve: Curves.easeInOut);
+                    controller.jumpToPage(0);
                     setState(() {
                       this.currentPage = 0;
                     });
@@ -189,20 +187,20 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
                       borderRadius: BorderRadius.circular(4),
                       boxShadow: const [
                         BoxShadow(
-                          blurRadius: 4.0,
-                          spreadRadius: 1.0,
+                          blurRadius: 0.0,
+                          spreadRadius: 0.0,
                           color: Style.appbarcolor,
                         )
                       ],
                     ) : BoxDecoration(),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 8),
+                          vertical: 6, horizontal: 8),
                       child: Text(
                         'Hotels',
                         style: TextStyle(
                             color: Style.tabbarfontcolor,
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
@@ -211,9 +209,7 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
                 
                 InkWell(
                   onTap: (() {
-                    controller.animateToPage(1,
-                        duration: const Duration(seconds: 1),
-                        curve: Curves.easeInOut);
+                    controller.jumpToPage(1);
                     setState(() {
                       this.currentPage = 1;
                     });
@@ -224,20 +220,20 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
                       borderRadius: BorderRadius.circular(4),
                       boxShadow: const [
                         BoxShadow(
-                          blurRadius: 4.0,
-                          spreadRadius: 1.0,
+                          blurRadius: 0.0,
+                          spreadRadius: 0.0,
                           color: Style.appbarcolor,
                         )
                       ],
                     ) : BoxDecoration(),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 8),
+                          vertical: 6, horizontal: 8),
                       child: Text(
                         'Associations',
                         style: TextStyle(
                             color: Style.tabbarfontcolor,
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
@@ -246,9 +242,7 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
               
                 InkWell(
                   onTap: (() {
-                    controller.animateToPage(2,
-                        duration: const Duration(seconds: 1),
-                        curve: Curves.easeInOut);
+                    controller.jumpToPage(2);
                     setState(() {
                       this.currentPage = 2;
                     });
@@ -259,20 +253,20 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
                       borderRadius: BorderRadius.circular(4),
                       boxShadow: const [
                         BoxShadow(
-                          blurRadius: 4.0,
-                          spreadRadius: 1.0,
+                          blurRadius: 0.0,
+                          spreadRadius: 0.0,
                           color: Style.appbarcolor,
                         )
                       ],
                     ) : BoxDecoration(),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 8),
+                          vertical: 6, horizontal: 8),
                       child: Text(
                         'Airlines',
                         style: TextStyle(
                             color: Style.tabbarfontcolor,
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
@@ -281,9 +275,7 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
                 
                 InkWell(
                   onTap: (() {
-                    controller.animateToPage(3,
-                        duration: const Duration(seconds: 1),
-                        curve: Curves.easeInOut);
+                    controller.jumpToPage(3);
                     setState(() {
                       this.currentPage = 3;
                     });
@@ -294,20 +286,20 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
                       borderRadius: BorderRadius.circular(4),
                       boxShadow: const [
                         BoxShadow(
-                          blurRadius: 4.0,
-                          spreadRadius: 1.0,
+                          blurRadius: 0.0,
+                          spreadRadius: 0.0,
                           color: Style.appbarcolor,
                         )
                       ],
                     ) : BoxDecoration(),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 8),
+                          vertical: 6, horizontal: 8),
                       child: Text(
                         'Tourism Boards',
                         style: TextStyle(
                             color: Style.tabbarfontcolor,
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
@@ -316,9 +308,7 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
               
                 InkWell(
                   onTap: (() {
-                    controller.animateToPage(4,
-                        duration: const Duration(seconds: 1),
-                        curve: Curves.easeInOut);
+                    controller.jumpToPage(4);
                     setState(() {
                       this.currentPage = 4;
                     });
@@ -329,20 +319,20 @@ class _MyHomePageTabBarState extends State<MyHomePageTabBar> {
                       borderRadius: BorderRadius.circular(4),
                       boxShadow: const [
                         BoxShadow(
-                          blurRadius: 4.0,
-                          spreadRadius: 1.0,
+                          blurRadius: 0.0,
+                          spreadRadius: 0.0,
                           color: Style.appbarcolor,
                         )
                       ],
                     ) : BoxDecoration(),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 8),
+                          vertical: 6, horizontal: 8),
                       child: Text(
                         'Others',
                         style: TextStyle(
                             color: Style.tabbarfontcolor,
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400),
                       ),
                     ),

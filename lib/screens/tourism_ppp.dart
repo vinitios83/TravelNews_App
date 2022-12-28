@@ -209,64 +209,69 @@ class _TourismPPPState extends State<TourismPPP> {
                           alignment: Alignment.center,
                           height: 50,
                           width: MediaQuery.of(context).size.width,
-                          decoration:
-                              const BoxDecoration(color: Style.backgroundcolor),
-                          child: Padding(padding: EdgeInsets.all(5),
+                          decoration: const BoxDecoration(
+                              color: Style.headerYellowcolor),
+                          child: Padding(
+                            padding: EdgeInsets.all(5),
                             child: ListView.separated(
-                              shrinkWrap: true,
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 10),
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (BuildContext context, int index) {
-                                Color textcolor = Style.primaryfontcolor;
-                                return Padding(padding: EdgeInsets.only(top: 5,bottom: 5),
-                                child: InkWell(
-                                  onTap: (() {
-                                    setState(() {
-                                      maintabselectedindex = index;
-                                      othertabselectedindex = 0;
-                                      setotherbar();
-                                    });
-                                  }),
-                                  child: Container(
-                                    decoration: (maintabselectedindex == index)
-                                        ? BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(4),
-                                            boxShadow: const [
-                                              BoxShadow(
-                                                blurRadius: 4.0,
-                                                spreadRadius: 1.0,
-                                                color: Style.appbarcolor,
+                                shrinkWrap: true,
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (BuildContext context, int index) {
+                                  Color textcolor = Style.primaryfontcolor;
+                                  return Padding(
+                                    padding: EdgeInsets.only(top: 5, bottom: 5),
+                                    child: InkWell(
+                                      onTap: (() {
+                                        setState(() {
+                                          maintabselectedindex = index;
+                                          othertabselectedindex = 0;
+                                          setotherbar();
+                                        });
+                                      }),
+                                      child: Container(
+                                        decoration: (maintabselectedindex ==
+                                                index)
+                                            ? BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(4),
+                                                boxShadow: const [
+                                                  BoxShadow(
+                                                    blurRadius: 0.0,
+                                                    spreadRadius: 0.0,
+                                                    color:
+                                                        Style.othertabbarcolor,
+                                                  )
+                                                ],
                                               )
-                                            ],
-                                          )
-                                        : BoxDecoration(),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 4, horizontal: 8),
-                                      child: Text(
-                                          maintab[index]["value"].toString(),
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              color: textcolor,
-                                              fontSize: 16,
-                                              letterSpacing: 0.2,
-                                              fontFamily: 'Economica Bold',
-                                              fontWeight: FontWeight.w500)),
+                                            : BoxDecoration(),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              vertical: 4, horizontal: 8),
+                                          child: Text(
+                                              maintab[index]["value"]
+                                                  .toString(),
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: textcolor,
+                                                  fontSize: 16,
+                                                  letterSpacing: 0.2,
+                                                  fontFamily: 'Economica Bold',
+                                                  fontWeight: FontWeight.w500)),
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                ),
-                                );
-                              },
-                              separatorBuilder:
-                                  (BuildContext context, int index) {
-                                return const VerticalDivider(
-                                  width: 8,
-                                );
-                              },
-                              itemCount: maintab.length),
+                                  );
+                                },
+                                separatorBuilder:
+                                    (BuildContext context, int index) {
+                                  return const VerticalDivider(
+                                    width: 8,
+                                  );
+                                },
+                                itemCount: maintab.length),
                           ),
                         ),
                         Container(
@@ -287,51 +292,53 @@ class _TourismPPPState extends State<TourismPPP> {
                                 } else {
                                   textcolor = Style.appbarfontcolor;
                                 }
-                              return Padding(padding: EdgeInsets.only(top: 5,bottom: 5),
-                                child: InkWell(
-                                  onTap: (() {
-                                    setState(() {
+                                return Padding(
+                                  padding: EdgeInsets.only(top: 5, bottom: 5),
+                                  child: InkWell(
+                                    onTap: (() {
+                                      setState(() {
                                         othertabselectedindex = index;
                                         setcontent();
                                       });
                                     }),
-                                  child: Container(
-                                    decoration: (othertabselectedindex == index)
-                                        ? BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(4),
-                                            boxShadow: const [
-                                              BoxShadow(
-                                                blurRadius: 4.0,
-                                                spreadRadius: 1.0,
-                                                color: Style.appbarcolor,
-                                              )
-                                            ],
-                                          )
-                                        : BoxDecoration(),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 4, horizontal: 8),
-                                      child: Text(
-                                          othertab[index]["value"].toString(),
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              color: textcolor,
-                                              fontSize: 16,
-                                              letterSpacing: 0.2,
-                                              fontFamily: 'Economica Bold',
-                                              fontWeight: FontWeight.w500)),
+                                    child: Container(
+                                      decoration:
+                                          (othertabselectedindex == index)
+                                              ? BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                      BorderRadius.circular(4),
+                                                  boxShadow: const [
+                                                    BoxShadow(
+                                                      blurRadius: 4.0,
+                                                      spreadRadius: 1.0,
+                                                      color: Style.appbarcolor,
+                                                    )
+                                                  ],
+                                                )
+                                              : BoxDecoration(),
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4, horizontal: 8),
+                                        child: Text(
+                                            othertab[index]["value"].toString(),
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                color: textcolor,
+                                                fontSize: 16,
+                                                letterSpacing: 0.2,
+                                                fontFamily: 'Economica Bold',
+                                                fontWeight: FontWeight.w500)),
+                                      ),
                                     ),
                                   ),
-                                ),
                                 );
                               },
                               separatorBuilder:
                                   (BuildContext context, int index) {
                                 return const VerticalDivider(
-                                    width: 8,
-                                    );
+                                  width: 8,
+                                );
                               },
                               itemCount: othertab.length),
                         ),
@@ -400,58 +407,52 @@ class _TourismPPPState extends State<TourismPPP> {
   }
 
   Widget videoui(SliderData data) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 400.0,
-              enlargeCenterPage: true,
-              autoPlay: true,
-              initialPage: 0,
-              enableInfiniteScroll: true,
-              reverse: false,
-              autoPlayInterval: Duration(seconds: 3),
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
-              autoPlayCurve: Curves.fastOutSlowIn,
-            ),
-            items: data.sectionContent[0].items.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Center(
-                    child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.symmetric(horizontal: 2.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            // Get.to(LiveTvPage(
-                            //     url:
-                            //         "http://techslides.com/demos/sample-videos/small.mp4"));
-                            print("Video URL: " + i["Url"].toString());
-                            Get.to(LiveTvPage(url: i["Url"].toString()));
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Stack(
-                              children: [
-                                Center(
-                                  child: CachedNetworkImage(
-                                      imageUrl: i["Imageurl"].toString()),
-                                ),
-                                Center(
-                                    child: Image.asset("assets/yt_news.png")),
-                              ],
-                            ),
-                          ),
-                        )),
-                  );
-                },
-              );
-            }).toList(),
-          )
-        ],
+    return GridView.builder(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 8.0,
+        crossAxisCount: 2,
       ),
+      itemCount: data.sectionContent[0].items.length,
+      itemBuilder: (context, index) {
+        return new GestureDetector(
+            onTap: () {
+              Get.to(LiveTvPage(
+                  url: data.sectionContent[0].items[index]["Url"].toString()));
+            },
+            child: Center(
+              child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  margin: EdgeInsets.symmetric(horizontal: 2.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      // Get.to(LiveTvPage(
+                      //     url:
+                      //         "http://techslides.com/demos/sample-videos/small.mp4"));
+                      print("Video URL: " +
+                          data.sectionContent[0].items[index]["Url"]
+                              .toString());
+                      Get.to(LiveTvPage(
+                          url: data.sectionContent[0].items[index]["Url"]
+                              .toString()));
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Stack(
+                        children: [
+                          Center(
+                            child: CachedNetworkImage(
+                                imageUrl: data
+                                    .sectionContent[0].items[index]["Imageurl"]
+                                    .toString()),
+                          ),
+                          Center(child: Image.asset("assets/yt_news.png")),
+                        ],
+                      ),
+                    ),
+                  )),
+            ));
+      },
     );
   }
 
@@ -463,82 +464,64 @@ class _TourismPPPState extends State<TourismPPP> {
               Image.asset("assets/app_icon_square.png"),
         ),
       );
+
   Widget imgui(SliderData data) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 400.0,
-              enlargeCenterPage: true,
-              autoPlay: true,
-              initialPage: 0,
-              enableInfiniteScroll: true,
-              reverse: false,
-              autoPlayInterval: Duration(seconds: 3),
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
-              autoPlayCurve: Curves.fastOutSlowIn,
-            ),
-            items: data.sectionContent[0].items.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    //
-                    child: customWidget(i["Url"].toString()),
-                  );
-                },
-              );
-            }).toList(),
-          )
-        ],
+    return GridView.builder(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 8.0,
+        crossAxisCount: 2,
       ),
+      itemCount: data.sectionContent[0].items.length,
+      itemBuilder: (context, index) {
+        return new GestureDetector(
+          onTap: () {},
+          child: Container(
+            decoration: BoxDecoration(),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.symmetric(horizontal: 5.0),
+              //
+              child: customWidget(
+                  data.sectionContent[0].items[index]["Url"].toString()),
+            ),
+          ),
+        );
+      },
     );
   }
 
   Widget pdfui(SliderData data) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 400.0,
-              enlargeCenterPage: true,
-              autoPlay: true,
-              initialPage: 0,
-              enableInfiniteScroll: true,
-              reverse: false,
-              autoPlayInterval: Duration(seconds: 3),
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
-              autoPlayCurve: Curves.fastOutSlowIn,
-            ),
-            items: data.sectionContent[0].items.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                      width: MediaQuery.of(context).size.width,
-                      margin: EdgeInsets.symmetric(horizontal: 5.0),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.to(PDFViewerCachedFromUrl(
-                            url: i["Url"].toString(),
-                          ));
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: CachedNetworkImage(
-                              imageUrl: i["Imageurl"].toString()),
-                        ),
-                      ));
-                },
-              );
-            }).toList(),
-          )
-        ],
+    return GridView.builder(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 8.0,
+        crossAxisCount: 2,
       ),
+      itemCount: data.sectionContent[0].items.length,
+      itemBuilder: (context, index) {
+        return new GestureDetector(
+          onTap: () {
+            Get.to(PDFViewerCachedFromUrl(
+              url: data.sectionContent[0].items[index]["Url"].toString(),
+            ));
+          },
+          child: Container(
+            decoration: BoxDecoration(),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.symmetric(horizontal: 5.0),
+              //
+              child: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: CachedNetworkImage(
+                    imageUrl: data.sectionContent[0].items[index]["Imageurl"]
+                        .toString()),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

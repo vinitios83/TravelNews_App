@@ -1,4 +1,3 @@
-
 import 'package:badges/badges.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -20,11 +19,12 @@ class ArticleTile extends StatelessWidget {
   final int index;
   final List<Hotnew> list;
 
-final ValueChanged<bool> onChanged;
-final bool isPlayTV;
-void _handleTap() {
+  final ValueChanged<bool> onChanged;
+  final bool isPlayTV;
+  void _handleTap() {
     onChanged(false);
   }
+
   @override
   Widget build(BuildContext context) {
     bool isNew =
@@ -34,115 +34,112 @@ void _handleTap() {
       onTap: (() {
         this._handleTap();
         Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (ctx) => NewsDetailPage(
-            hotnew: list,
-            index: index,
-          ),
-        ),);
-      }),
-      child: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Style.backgroundcolor,
-              borderRadius: BorderRadius.circular(2),
+          context,
+          MaterialPageRoute(
+            builder: (ctx) => NewsDetailPage(
+              hotnew: list,
+              index: index,
             ),
-            child: Column(
+          ),
+        );
+      }),
+      child: Padding(padding: EdgeInsets.only(bottom: 8),
+      child: Container(
+          height: 110,
+          child: Card(
+            elevation: 1.0,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(width: 0.2),
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+            child: Padding(padding: EdgeInsets.all(8),
+              child: Row(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.values[4],
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5, bottom: 3),
-                      child: CachedNetworkImage(
-                        imageUrl: list[index].image,
-                        height: 70,
-                        width: 120,
-                        fit: BoxFit.cover,
-                        placeholder: (context, url) => SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02,
-                          width: MediaQuery.of(context).size.width * 0.3,
-                          child: Image.asset(
-                            AppConstants.fallBackLogo,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        errorWidget: (context, url, _) => SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.03,
-                          width: 120,
-                          child: Image.asset(
-                            AppConstants.fallBackLogo,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - (170),
-                      child: Container(
-                        child: Flexible(
-                         child: Text(
-                          list[index].videoname,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 3,
-                          style: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: Style.primaryfontcolor,
-                              fontFamily: 'Calibri Regular'),
-                        ), 
-                        ),
-                      ),
-                    ),
-                    Icon(Icons.keyboard_arrow_right,size: 18,),
-                  ],
+                Expanded(
+                  flex: 33,
+                  child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: CachedNetworkImage(
+                                imageUrl: list[index].image,
+                                height: 80,
+                                width: 120,
+                                fit: BoxFit.cover,
+                                placeholder: (context, url) => SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.02,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.3,
+                                  child: Image.asset(
+                                    AppConstants.fallBackLogo,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                errorWidget: (context, url, _) => SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.03,
+                                  width: 120,
+                                  child: Image.asset(
+                                    AppConstants.fallBackLogo,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width - (60),
-                  child: Text(
+                VerticalDivider(
+                  color: Colors.white,
+                  width: 8.0,
+                ),
+                Expanded(
+                  flex: 70,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Expanded(
+                        flex: 70,
+                        child: Text(
+                                  list[index].videoname,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 3,
+                                  style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Style.primaryfontcolor,
+                                      fontFamily: 'Calibri Regular'),
+                                ),
+                              
+                      ),
+                      
+                      Expanded(flex: 25, child: Text(
                           list[index].createdt,
-                          overflow: TextOverflow.ellipsis,
                           maxLines: 1,
-                          textAlign: TextAlign.end,
+                          textAlign: TextAlign.left,
                           style: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.normal,
                               color: Style.primaryfontcolor,
                               fontFamily: 'Calibri Regular'),
-                        ),
+                        ),),
+                    ],
+                  ),
                 ),
-                const Divider(
-                  thickness: 2,
-                  color: Style.dividercolor,
-                )
+                VerticalDivider(
+                  color: Colors.white,
+                  width: 8.0,
+                ),
+                Icon(
+                  color:Colors.black,
+                            Icons.keyboard_arrow_right,
+                            size: 18,
+                          ),
+                          
               ],
             ),
+            )
           ),
-          Positioned(
-            top: 0,
-            left: 0,
-            child: Badge(
-              toAnimate: true,
-              shape: BadgeShape.square,
-              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-              showBadge: isNew,
-              animationType: BadgeAnimationType.scale,
-              badgeColor: Colors.red,
-              borderRadius: BorderRadius.circular(0),
-              badgeContent: const Text(
-                'New',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 10,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+        ),
+      )
     );
   }
 }
+

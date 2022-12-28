@@ -15,4 +15,6 @@ class Style {
 
   static const Color selectedmaintabbarcolor = Color(0xff0511fc);
   static const Color selectedbelowtabbarcolor = Color(0xffc3c6fa);
+
+  static const Color headerYellowcolor = Color.fromRGBO(236, 182, 62, 1);
 }

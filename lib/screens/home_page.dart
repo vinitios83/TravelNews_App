@@ -145,9 +145,9 @@ void _handlePushFromList(bool newValue) {
                       myList[3].detail,
                 ),
                 Container(
-                  height: 40,
+                  height: 50,
                   decoration:
-                      const BoxDecoration(color: Style.othertabbarcolor),
+                      const BoxDecoration(color: Style.headerYellowcolor),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
@@ -165,30 +165,29 @@ void _handlePushFromList(bool newValue) {
                             borderRadius: BorderRadius.circular(4),
                             boxShadow: const [
                               BoxShadow(
-                                blurRadius: 4.0,
-                                spreadRadius: 1.0,
-                                color: Style.appbarcolor,
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
                               )
                             ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 8),
+                                vertical: 6, horizontal: 8),
                             child: Text(
                               'News',
                               style: TextStyle(
                                   color: Style.tabbarfontcolor,
-                                  fontSize: 16,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w400),
                             ),
                           ),
                         ),
                       ),
                       const VerticalDivider(
-                          thickness: 2,
-                          endIndent: 7,
-                          indent: 7,
-                          color: Style.othertabbarcolor),
+                        color: Style.headerYellowcolor,
+                        width: 5.0,
+                          ),
                       InkWell(
                         onTap: () {
                           setState(() {
@@ -202,30 +201,28 @@ void _handlePushFromList(bool newValue) {
                             borderRadius: BorderRadius.circular(4),
                             boxShadow: const [
                               BoxShadow(
-                                blurRadius: 4.0,
-                                spreadRadius: 1.0,
-                                color: Style.appbarcolor,
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
                               )
                             ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 8),
+                                vertical: 6, horizontal: 8),
                             child: Text(
                               'Views/Interviews',
                               style: TextStyle(
                                   color: Style.tabbarfontcolor,
-                                  fontSize: 16,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w400),
                             ),
                           ),
                         ),
                       ),
                       const VerticalDivider(
-                          thickness: 2,
-                          endIndent: 7,
-                          indent: 7,
-                          color: Style.othertabbarcolor),
+                        color: Style.headerYellowcolor,
+                          width: 5.0,),
                       InkWell(
                         onTap: () {
                           setState(() {
@@ -239,30 +236,28 @@ void _handlePushFromList(bool newValue) {
                             borderRadius: BorderRadius.circular(4),
                             boxShadow: const [
                               BoxShadow(
-                                blurRadius: 4.0,
-                                spreadRadius: 1.0,
-                                color: Style.appbarcolor,
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
                               )
                             ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 8),
+                                vertical: 6, horizontal: 8),
                             child: Text(
                               'B2B',
                               style: TextStyle(
                                   color: Style.tabbarfontcolor,
-                                  fontSize: 16,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w400),
                             ),
                           ),
                         ),
                       ),
                       const VerticalDivider(
-                        thickness: 2,
-                        endIndent: 7,
-                        indent: 7,
-                        color: Style.othertabbarcolor,
+                        color: Style.headerYellowcolor,
+                        width: 5.0
                       ),
                       InkWell(
                         onTap: () {
@@ -277,30 +272,28 @@ void _handlePushFromList(bool newValue) {
                             borderRadius: BorderRadius.circular(4),
                             boxShadow: const [
                               BoxShadow(
-                                blurRadius: 4.0,
-                                spreadRadius: 1.0,
-                                color: Style.appbarcolor,
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Colors.white,
                               )
                             ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 8),
+                                vertical: 6, horizontal: 8),
                             child: Text(
                               'PPP',
                               style: TextStyle(
                                   color: Style.tabbarfontcolor,
-                                  fontSize: 16,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w400),
                             ),
                           ),
                         ),
                       ),
                       const VerticalDivider(
-                        thickness: 2,
-                        endIndent: 7,
-                        indent: 7,
-                        color: Style.othertabbarcolor,
+                        color: Style.headerYellowcolor,
+                        width: 5.0
                       ),
                       InkWell(
                         onTap: () {
@@ -315,20 +308,20 @@ void _handlePushFromList(bool newValue) {
                             borderRadius: BorderRadius.circular(4),
                             boxShadow: const [
                               BoxShadow(
-                                blurRadius: 4.0,
-                                spreadRadius: 1.0,
-                                color: Style.appbarcolor,
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Colors.white,
                               )
                             ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 8),
+                                vertical: 6, horizontal: 8),
                             child: Text(
                               'Campus',
                               style: TextStyle(
                                   color: Style.tabbarfontcolor,
-                                  fontSize: 16,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w400),
                             ),
                           ),

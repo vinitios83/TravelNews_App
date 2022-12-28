@@ -146,9 +146,9 @@ class _PPPHomeState extends State<PPPHome> {
                 height: 250,
               ),
               Container(
-                height: 35,
+                color: Style.headerYellowcolor,
+                height: 50,
                 width: MediaQuery.of(context).size.width,
-                decoration: const BoxDecoration(color: Style.backgroundcolor),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -165,15 +165,15 @@ class _PPPHomeState extends State<PPPHome> {
                           borderRadius: BorderRadius.circular(4),
                           boxShadow: const [
                             BoxShadow(
-                              blurRadius: 4.0,
-                              spreadRadius: 1.0,
-                              color: Style.appbarcolor,
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                              color: Colors.white,
                             )
                           ],
                         ) : BoxDecoration(),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              vertical: 4, horizontal: 8),
+                              vertical: 8, horizontal: 8),
                           child: Text(
                             'International Tourism Boards',
                             style: TextStyle(
@@ -185,6 +185,7 @@ class _PPPHomeState extends State<PPPHome> {
                       ),
                     ),
                     const VerticalDivider(
+                      color: Style.headerYellowcolor,
                         width: 8),
                     InkWell(
                       onTap: (() {
@@ -199,15 +200,15 @@ class _PPPHomeState extends State<PPPHome> {
                           borderRadius: BorderRadius.circular(4),
                           boxShadow: const [
                             BoxShadow(
-                              blurRadius: 4.0,
-                              spreadRadius: 1.0,
-                              color: Style.appbarcolor,
+                              blurRadius: 0.0,
+                              spreadRadius: 0.0,
+                              color: Style.othertabbarcolor,
                             )
                           ],
                         ) : BoxDecoration(),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              vertical: 4, horizontal: 8),
+                              vertical: 8, horizontal: 8),
                           child: Text(
                             'Domestic Tourism Boards',
                             style: TextStyle(

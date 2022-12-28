@@ -200,7 +200,123 @@ class YouTubeTile extends StatelessWidget {
       onTap: () {
         _controller.loadVideoById(videoId: id);
       },
-      child: Stack(
+      child: Padding(padding: EdgeInsets.only(bottom: 8),
+      child: Container(
+          height: 110,
+          child: Card(
+            elevation: 1.0,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(width: 0.2),
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+            child: Padding(padding: EdgeInsets.all(8),
+              child: Row(
+              children: [
+                Expanded(
+                  flex: 33,
+                  child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: CachedNetworkImage(
+                                imageUrl: imageUrl,
+                                height: 80,
+                                width: 120,
+                                fit: BoxFit.cover,
+                                placeholder: (context, url) => SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.02,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.3,
+                                  child: Image.asset(
+                                    AppConstants.fallBackLogo,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                errorWidget: (context, url, _) => SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.03,
+                                  width: 120,
+                                  child: Image.asset(
+                                    AppConstants.fallBackLogo,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                ),
+                VerticalDivider(
+                  color: Colors.white,
+                  width: 8.0,
+                ),
+                Expanded(
+                  flex: 66,
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 50,
+                        child: Text(
+                                  '$title',
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 3,
+                                  style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Style.primaryfontcolor,
+                                      fontFamily: 'Calibri Regular'),
+                                ),
+                              
+                      ),
+                      
+                    ],
+                  ),
+                ),
+                Icon(
+                            Icons.keyboard_arrow_right,
+                            size: 18,
+                          ),
+              ],
+            ),
+            )
+          ),
+        ),
+      )
+    );
+  }
+}
+
+class Header extends StatefulWidget {
+  const Header({
+    Key? key,
+    required this.initialId,
+  }) : super(key: key);
+  final String initialId;
+
+  @override
+  State<Header> createState() => _HeaderState();
+}
+
+class _HeaderState extends State<Header> {
+  @override
+  void initState() {
+    startPlayer();
+    super.initState();
+  }
+
+  Future<void> startPlayer() async {
+    await Future.delayed(const Duration(seconds: 5));
+    _controller.loadVideoById(videoId: widget.initialId);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return YoutubePlayerIFrame(
+      controller: _controller,
+      aspectRatio: 16 / 9,
+    );
+  }
+}
+
+/*
+Stack(
         children: [
           Container(
             // margin: const EdgeInsets.symmetric(vertical: 1.2),
@@ -282,38 +398,4 @@ class YouTubeTile extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class Header extends StatefulWidget {
-  const Header({
-    Key? key,
-    required this.initialId,
-  }) : super(key: key);
-  final String initialId;
-
-  @override
-  State<Header> createState() => _HeaderState();
-}
-
-class _HeaderState extends State<Header> {
-  @override
-  void initState() {
-    startPlayer();
-    super.initState();
-  }
-
-  Future<void> startPlayer() async {
-    await Future.delayed(const Duration(seconds: 5));
-    _controller.loadVideoById(videoId: widget.initialId);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return YoutubePlayerIFrame(
-      controller: _controller,
-      aspectRatio: 16 / 9,
-    );
-  }
-}
+*/

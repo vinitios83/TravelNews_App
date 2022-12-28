@@ -73,17 +73,15 @@ class _AssociationPageState extends State<AssociationPage>
         body: Column(
           children: [
             Container(
-              height: 35,
+              height: 50,
               width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(color: Style.backgroundcolor),
+              decoration: const BoxDecoration(color: Style.headerYellowcolor),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
                     onTap: (() {
-                      controller.animateToPage(0,
-                          duration: const Duration(seconds: 1),
-                          curve: Curves.easeInOut);
+                      controller.jumpToPage(0);
                       setState(() {
                         this.currentPage = 0;
                       });
@@ -95,16 +93,16 @@ class _AssociationPageState extends State<AssociationPage>
                               borderRadius: BorderRadius.circular(4),
                               boxShadow: const [
                                 BoxShadow(
-                                  blurRadius: 4.0,
-                                  spreadRadius: 1.0,
-                                  color: Style.appbarcolor,
+                                  blurRadius: 0.0,
+                                  spreadRadius: 0.0,
+                                  color: Style.backgroundcolor,
                                 )
                               ],
                             )
                           : BoxDecoration(),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 8),
+                            vertical: 6, horizontal: 8),
                         child: Text(
                           'Associations',
                           style: TextStyle(
@@ -116,12 +114,11 @@ class _AssociationPageState extends State<AssociationPage>
                     ),
                   ),
                   const VerticalDivider(
-                      width: 8,),
+                    color: Style.headerYellowcolor,
+                      width: 5,),
                   InkWell(
                     onTap: (() {
-                      controller.animateToPage(1,
-                          duration: const Duration(seconds: 1),
-                          curve: Curves.easeInOut);
+                      controller.jumpToPage(1);
                       setState(() {
                         this.currentPage = 1;
                       });
@@ -133,16 +130,16 @@ class _AssociationPageState extends State<AssociationPage>
                               borderRadius: BorderRadius.circular(4),
                               boxShadow: const [
                                 BoxShadow(
-                                  blurRadius: 4.0,
-                                  spreadRadius: 1.0,
-                                  color: Style.appbarcolor,
+                                  blurRadius: 0.0,
+                                  spreadRadius: 0.0,
+                                  color: Style.backgroundcolor,
                                 )
                               ],
                             )
                           : BoxDecoration(),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 8),
+                            vertical: 6, horizontal: 8),
                         child: Text(
                           'Forex',
                           style: TextStyle(
@@ -154,12 +151,11 @@ class _AssociationPageState extends State<AssociationPage>
                     ),
                   ),
                   const VerticalDivider(
-                      width: 8,),
+                    color: Style.headerYellowcolor,
+                      width: 5,),
                   InkWell(
                     onTap: (() {
-                      controller.animateToPage(2,
-                          duration: const Duration(seconds: 1),
-                          curve: Curves.easeInOut);
+                      controller.jumpToPage(2);
                       setState(() {
                         this.currentPage = 2;
                       });
@@ -171,16 +167,16 @@ class _AssociationPageState extends State<AssociationPage>
                               borderRadius: BorderRadius.circular(4),
                               boxShadow: const [
                                 BoxShadow(
-                                  blurRadius: 4.0,
-                                  spreadRadius: 1.0,
-                                  color: Style.appbarcolor,
+                                  blurRadius: 0.0,
+                                  spreadRadius: 0.0,
+                                  color: Style.backgroundcolor,
                                 )
                               ],
                             )
                           : BoxDecoration(),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 8),
+                            vertical: 6, horizontal: 8),
                         child: Text(
                           'Insurance',
                           style: TextStyle(
@@ -192,12 +188,11 @@ class _AssociationPageState extends State<AssociationPage>
                     ),
                   ),
                   const VerticalDivider(
-                      width: 8,),
+                    color: Style.headerYellowcolor,
+                      width: 5,),
                   InkWell(
                     onTap: (() {
-                      controller.animateToPage(3,
-                          duration: const Duration(seconds: 1),
-                          curve: Curves.easeInOut);
+                      controller.jumpToPage(3);
                       setState(() {
                         this.currentPage = 3;
                       });
@@ -209,16 +204,16 @@ class _AssociationPageState extends State<AssociationPage>
                               borderRadius: BorderRadius.circular(4),
                               boxShadow: const [
                                 BoxShadow(
-                                  blurRadius: 4.0,
-                                  spreadRadius: 1.0,
-                                  color: Style.appbarcolor,
+                                  blurRadius: 0.0,
+                                  spreadRadius: 0.0,
+                                  color: Style.backgroundcolor,
                                 )
                               ],
                             )
                           : BoxDecoration(),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 8),
+                            vertical: 6, horizontal: 8),
                         child: Text(
                           'Spcl Offers',
                           style: TextStyle(
@@ -233,7 +228,7 @@ class _AssociationPageState extends State<AssociationPage>
               ),
             ),
             const Divider(
-              height: 12,
+              height: 4,
               color: Colors.white,
             ),
             Expanded(
@@ -248,200 +243,176 @@ class _AssociationPageState extends State<AssociationPage>
                   Column(
                     children: [
                       Container(
-                        height: 35,
-                        width: MediaQuery.of(context).size.width,
+                        height: 40,
+                        width: MediaQuery.of(context).size.width - 85.0,
                         decoration:
-                            const BoxDecoration(color: Style.backgroundcolor),
+                            BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(4),
+                              boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 0.0,
+                                  spreadRadius: 0.0,
+                                  color: Style.backgroundcolor,
+                                )
+                              ],
+                            ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             InkWell(
                               onTap: (() {
-                                seccontroller.animateToPage(0,
-                                    duration: const Duration(seconds: 1),
-                                    curve: Curves.easeInOut);
+                                seccontroller.jumpToPage(0);
                                 setState(() {
                                   this.subPage = 0;
                                 });
                               }),
                               child: Container(
+                                height: 35.0,
                                 decoration: (this.subPage == 0)
-                                    ? BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(4),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            spreadRadius: 1.0,
-                                            color: Style.appbarcolor,
-                                          )
-                                        ],
-                                      )
-                                    : BoxDecoration(),
-                                child: Padding(
+                                    ? BoxDecoration()
+                                    : BoxDecoration(
+                                      color: Colors.white
+                                    ),
+                                child: Center(
+                                  child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 4, horizontal: 8),
                                   child: Text(
                                     'National',
                                     style: TextStyle(
-                                        color: Style.tabbarfontcolor,
+                                        color: (this.subPage == 0) ? Colors.white : Colors.black,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
                                   ),
                                 ),
+                                )
                               ),
                             ),
                             const VerticalDivider(
-                                width: 8,),
+                              color: Colors.red,
+                                width: 2,),
                             InkWell(
                               onTap: (() {
-                                seccontroller.animateToPage(1,
-                                    duration: const Duration(seconds: 1),
-                                    curve: Curves.easeInOut);
+                                seccontroller.jumpToPage(1);
                                 setState(() {
                                   this.subPage = 1;
                                 });
                               }),
                               child: Container(
+                                height: 35.0,
                                 decoration: (this.subPage == 1)
-                                    ? BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(4),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            spreadRadius: 1.0,
-                                            color: Style.appbarcolor,
-                                          )
-                                        ],
-                                      )
-                                    : BoxDecoration(),
-                                child: Padding(
+                                    ? BoxDecoration()
+                                    : BoxDecoration(
+                                      color: Colors.white
+                                    ),
+                                child: Center(
+                                  child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 4, horizontal: 8),
                                   child: Text(
                                     'Regional',
                                     style: TextStyle(
-                                        color: Style.tabbarfontcolor,
+                                        color: (this.subPage == 1) ? Colors.white : Colors.black,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
                                   ),
                                 ),
+                                )
                               ),
                             ),
                             const VerticalDivider(
-                                width: 8,),
+                                width: 2,),
                             InkWell(
                               onTap: (() {
-                                seccontroller.animateToPage(2,
-                                    duration: const Duration(seconds: 1),
-                                    curve: Curves.easeInOut);
+                                seccontroller.jumpToPage(2);
                                 setState(() {
                                   this.subPage = 2;
                                 });
                               }),
                               child: Container(
+                                height: 35.0,
                                 decoration: (this.subPage == 2)
-                                    ? BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(4),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            spreadRadius: 1.0,
-                                            color: Style.appbarcolor,
-                                          )
-                                        ],
-                                      )
-                                    : BoxDecoration(),
-                                child: Padding(
+                                    ? BoxDecoration()
+                                    : BoxDecoration(
+                                      color: Colors.white
+                                    ),
+                                child: Center(
+                                  child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 4, horizontal: 8),
                                   child: Text(
                                     'International',
                                     style: TextStyle(
-                                        color: Style.tabbarfontcolor,
+                                        color: (this.subPage == 2) ? Colors.white : Colors.black,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
                                   ),
                                 ),
+                                )
                               ),
                             ),
                             const VerticalDivider(
-                                width: 8,),
+                                width: 2,),
                             InkWell(
                               onTap: (() {
-                                seccontroller.animateToPage(3,
-                                    duration: const Duration(seconds: 1),
-                                    curve: Curves.easeInOut);
+                                seccontroller.jumpToPage(3);
                                 setState(() {
                                   this.subPage = 3;
                                 });
                               }),
                               child: Container(
+                                height: 35.0,
                                 decoration: (this.subPage == 3)
-                                    ? BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(4),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            spreadRadius: 1.0,
-                                            color: Style.appbarcolor,
-                                          )
-                                        ],
-                                      )
-                                    : BoxDecoration(),
-                                child: Padding(
+                                    ? BoxDecoration()
+                                    : BoxDecoration(
+                                      color: Colors.white
+                                    ),
+                                child: Center(
+                                  child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 4, horizontal: 8),
                                   child: Text(
                                     'Buyers',
                                     style: TextStyle(
-                                        color: Style.tabbarfontcolor,
+                                        color: (this.subPage == 3) ? Colors.white : Colors.black,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
                                   ),
                                 ),
+                                )
                               ),
                             ),
                             const VerticalDivider(
-                              width: 8,
+                              width: 2,
                                 ),
                             InkWell(
                               onTap: (() {
-                                seccontroller.animateToPage(4,
-                                    duration: const Duration(seconds: 1),
-                                    curve: Curves.easeInOut);
+                                seccontroller.jumpToPage(4);
                                 setState(() {
                                   this.subPage = 4;
                                 });
                               }),
                               child: Container(
+                                height: 35.0,
                                 decoration: (this.subPage == 4)
-                                    ? BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(4),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4.0,
-                                            spreadRadius: 1.0,
-                                            color: Style.appbarcolor,
-                                          )
-                                        ],
-                                      )
-                                    : BoxDecoration(),
-                                child: Padding(
+                                    ? BoxDecoration()
+                                    : BoxDecoration(
+                                      color: Colors.white
+                                    ),
+                                child: Center(
+                                  child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 4, horizontal: 8),
                                   child: Text(
                                     'Sellers',
                                     style: TextStyle(
-                                        color: Style.tabbarfontcolor,
+                                        color: (this.subPage == 4) ? Colors.white : Colors.black,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
                                   ),
                                 ),
+                                )
                               ),
                             ),
                           ],
@@ -464,9 +435,7 @@ class _AssociationPageState extends State<AssociationPage>
                                 Center(
                               child: InkWell(
                               onTap: (() {
-                                seccontroller.animateToPage(0,
-                                    duration: const Duration(seconds: 1),
-                                    curve: Curves.easeInOut);
+                                seccontroller.jumpToPage(0);
                                 setState(() {
                                   this.subPage = 0;
                                 });
@@ -511,9 +480,7 @@ class _AssociationPageState extends State<AssociationPage>
                                 Center(
                               child: InkWell(
                               onTap: (() {
-                                seccontroller.animateToPage(0,
-                                    duration: const Duration(seconds: 1),
-                                    curve: Curves.easeInOut);
+                                seccontroller.jumpToPage(0);
                                 setState(() {
                                   this.subPage = 0;
                                 });
@@ -746,108 +713,6 @@ class _AssociationTileState extends State<AssociationTile> {
 
   @override
   Widget build(BuildContext context) {
-    // return InkWell(
-    //   onTap: () {
-    //     if (widget.isLoggedIn && widget.user != null) {
-    //       Get.to(
-    //         () => AssociationDetailPage(
-    //           association: Association(
-    //             name: widget.user!.aName,
-    //             id: widget.user!.aId,
-    //             atype: widget.user!.aType,
-    //             imageUrl:
-    //                 '${AssociationHelper.URL_LIST_OF_ASSOCIATION_LOGOS}${widget.user!.aName}.jpg',
-    //           ),
-    //           userName: widget.user!.username,
-    //           password: widget.user!.password,
-    //         ),
-    //       );
-    //     } else {
-    //       if (widget._association.name != 'FAITH') {
-    //         Get.to(
-    //           () => LoginDialog(association: widget._association),
-    //         );
-    //       } else {
-    //         Get.to(
-    //           () => B2BHome(
-    //             association: widget._association,
-    //           ),
-    //         );
-    //       }
-    //     }
-    //   },
-    //   child: Card(
-    //     child: Column(
-    //       children: [
-    //         CachedNetworkImage(
-    //           imageUrl: widget._association.imageUrl,
-    //           height: 120,
-    //           width: 120,
-    //           fit: BoxFit.fill,
-    //           placeholder: (context, url) => const SizedBox(
-    //             height: 20,
-    //             width: 40,
-    //             child: Center(
-    //               child: CircularProgressIndicator(
-    //                 strokeWidth: 1,
-    //               ),
-    //             ),
-    //           ),
-    //           errorWidget: (context, url, error) => const Icon(Icons.error),
-    //         ),
-    //         Text(
-    //           (widget._association.name != 'FAITH')
-    //               ? widget._association.name
-    //               : 'B2B',
-    //         ),
-    //         Container(
-    //           child: (widget.isLoggedIn)
-    //               ? InkWell(
-    //                   onTap: () async {
-    //                     userBox.delete(widget._association.id);
-    //                     await FirebaseMessaging.instance.unsubscribeFromTopic(
-    //                       widget._association.name,
-    //                     );
-    //                   },
-    //                   child: const Text(
-    //                     'Sign Out',
-    //                     style: TextStyle(
-    //                       color: Colors.red,
-    //                       fontSize: 16,
-    //                     ),
-    //                   ),
-    //                 )
-    //               : InkWell(
-    //                   onTap: () {
-    //                     if (widget._association.name != 'FAITH') {
-    //                       Get.to(
-    //                         () => LoginDialog(
-    //                           association: widget._association,
-    //                         ),
-    //                       );
-    //                     } else {
-    //                       Get.to(
-    //                         () => B2BHome(
-    //                           association: widget._association,
-    //                         ),
-    //                       );
-    //                     }
-    //                   },
-    //                   child: Text(
-    //                     (widget._association.name != 'FAITH')
-    //                         ? 'SIGN IN'
-    //                         : 'B2B IN',
-    //                     style: const TextStyle(
-    //                       color: Color(0xff00cb00),
-    //                       fontSize: 16,
-    //                     ),
-    //                   ),
-    //                 ),
-    //         )
-    //       ],
-    //     ),
-    //   ),
-    // );
     return InkWell(
       onTap: () {
         if (widget.isLoggedIn && widget.user != null) {
@@ -929,23 +794,23 @@ class _AssociationTileState extends State<AssociationTile> {
                             },
                             child: Container(
                                 decoration: BoxDecoration(
-                                        color: Colors.white,
+                                        color: Colors.red,
                                         borderRadius: BorderRadius.circular(4),
                                         boxShadow: const [
                                           BoxShadow(
-                                            blurRadius: 4.0,
-                                            spreadRadius: 1.0,
-                                            color: Style.appbarcolor,
+                                            blurRadius: 0.0,
+                                            spreadRadius: 0.0,
+                                            color: Colors.red,
                                           )
                                         ],
                                       ),
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      vertical: 4, horizontal: 8),
+                                      vertical: 4, horizontal: 12),
                                   child: Text(
                                     'Sign Out',
                                     style: TextStyle(
-                                        color: Colors.red,
+                                        color: Colors.white,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
                                   ),
@@ -974,15 +839,15 @@ class _AssociationTileState extends State<AssociationTile> {
                                         borderRadius: BorderRadius.circular(4),
                                         boxShadow: const [
                                           BoxShadow(
-                                            blurRadius: 4.0,
+                                            blurRadius: 0.0,
                                             spreadRadius: 1.0,
-                                            color: Style.appbarcolor,
+                                            color: Style.othertabbarcolor,
                                           )
                                         ],
                                       ),
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      vertical: 4, horizontal: 8),
+                                      vertical: 4, horizontal: 12),
                                   child: Text(
                                     (widget._association.name != 'FAITH')
                                   ? 'SIGN IN'
