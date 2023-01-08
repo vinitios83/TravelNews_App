@@ -9,6 +9,9 @@ import '../utility/constant.dart';
 import 'package:get/get.dart';
 import 'package:travel_app/widget/live_tv.dart';
 import 'package:travel_app/screens/YouTubePlayerPage.dart';
+import 'package:travel_app/screens/AdvisoryProfile.dart';
+import 'package:travel_app/screens/BeDestinationPage.dart';
+import 'package:travel_app/screens/ExpertSkillsPage.dart';
 import '../widget/my_banners_ads.dart';
 
 class CapmusPage extends StatefulWidget {
@@ -20,17 +23,18 @@ class CapmusPage extends StatefulWidget {
 
 class _CapmusPageState extends State<CapmusPage>
     with SingleTickerProviderStateMixin {
-  final RemoteApi _remoteApi = RemoteApi();
-  var currentPage = 0;
-  var subPage = 0;
-  List<CampusCategory> campusCategoryList = [];
-  List<CampusCategory> subCampusCategoryList = [];
-  List<CampusCategory> videoList = [];
-  var isCallingAPI = true;
+  // final RemoteApi _remoteApi = RemoteApi();
+  // var currentPage = 0;
+  // var subPage = 0;
+  // List<CampusCategory> campusCategoryList = [];
+  // List<CampusCategory> subCampusCategoryList = [];
+  // List<CampusCategory> videoList = [];
+  // var isCallingAPI = true;
+  var arrOptions = ['Our Advisory Board','Be Destination','Expert Skills'];
   @override
   void initState() {
     super.initState();
-    fetchCategoryList();
+    // fetchCategoryList();
   }
 
   @override
@@ -38,49 +42,49 @@ class _CapmusPageState extends State<CapmusPage>
     super.dispose();
   }
 
-  fetchCategoryList() async {
-    await RemoteApi().getCampusCategoryList().then((value) => {
-          campusCategoryList = value?.campusCategoryList ?? [],
-          if (campusCategoryList.length == 0)
-            {
-              this.setState(() {
-                isCallingAPI = false;
-              })
-            }
-          else
-            {fetchSubCategoryList()}
-        });
-  }
+  // fetchCategoryList() async {
+  //   await RemoteApi().getCampusCategoryList().then((value) => {
+  //         campusCategoryList = value?.campusCategoryList ?? [],
+  //         if (campusCategoryList.length == 0)
+  //           {
+  //             this.setState(() {
+  //               isCallingAPI = false;
+  //             })
+  //           }
+  //         else
+  //           {fetchSubCategoryList()}
+  //       });
+  // }
 
-  fetchSubCategoryList() async {
-    isCallingAPI = true;
-    await RemoteApi()
-        .getSubCanpusCategory(campusCategoryList[currentPage].id)
-        .then((value) => {
-              subCampusCategoryList = value?.campusCategoryList ?? [],
-              if (subCampusCategoryList.length == 0)
-                {
-                  this.setState(() {
-                    isCallingAPI = false;
-                  })
-                }
-              else
-                {fetchCategoryVideoList()}
-            });
-  }
+  // fetchSubCategoryList() async {
+  //   isCallingAPI = true;
+  //   await RemoteApi()
+  //       .getSubCanpusCategory(campusCategoryList[currentPage].id)
+  //       .then((value) => {
+  //             subCampusCategoryList = value?.campusCategoryList ?? [],
+  //             if (subCampusCategoryList.length == 0)
+  //               {
+  //                 this.setState(() {
+  //                   isCallingAPI = false;
+  //                 })
+  //               }
+  //             else
+  //               {fetchCategoryVideoList()}
+  //           });
+  // }
 
-  fetchCategoryVideoList() async {
-    isCallingAPI = true;
-    await RemoteApi()
-        .getCanpusCategoryVideoList(campusCategoryList[currentPage].id,
-            subCampusCategoryList[subPage].id)
-        .then((value) => {
-              videoList = value?.campusCategoryList ?? [],
-              this.setState(() {
-                isCallingAPI = false;
-              })
-            });
-  }
+  // fetchCategoryVideoList() async {
+  //   isCallingAPI = true;
+  //   await RemoteApi()
+  //       .getCanpusCategoryVideoList(campusCategoryList[currentPage].id,
+  //           subCampusCategoryList[subPage].id)
+  //       .then((value) => {
+  //             videoList = value?.campusCategoryList ?? [],
+  //             this.setState(() {
+  //               isCallingAPI = false;
+  //             })
+  //           });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +112,65 @@ class _CapmusPageState extends State<CapmusPage>
           ),
         ),
         bottomNavigationBar: const MyBannerAds(),
-        body: (campusCategoryList.length == 0)
+        body: Padding(padding: EdgeInsets.all(15),
+          child: ListView.builder(
+		itemCount: arrOptions.length,
+		itemBuilder: (context, position) {
+			return GestureDetector(
+        onTap: () {
+          if (position == 0) {
+            Get.to(const AdvisoryProfilePage());
+          }
+          if (position == 1) {
+            Get.to(const BeDestinationPage());
+          }
+          if (position == 2) {
+            Get.to(const ExpertSkillsPage());
+          }
+        },
+        child: Card(
+      
+			child: Padding(
+				padding: const EdgeInsets.all(20.0),
+				child: Text(
+				arrOptions[position],
+				style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 16,
+                                          letterSpacing: 0.2,
+                                          fontFamily: 'Economica Bold',
+                                          fontWeight: FontWeight.w500),
+				),
+			),
+			),
+      );
+		},
+		),
+
+          )
+        );
+  }
+
+  // Widget nullui() {
+  //   if (isCallingAPI == true) {
+  //     return buildLoadingWidget();
+  //   } else {
+  //     return const Center(
+  //       child: Text(
+  //         "Nothing to show",
+  //         style: TextStyle(
+  //             fontSize: 18,
+  //             color: Style.primaryfontcolor,
+  //             fontWeight: FontWeight.w500,
+  //             fontFamily: 'Economica'),
+  //       ),
+  //     );
+  //   }
+  // }
+}
+
+/*
+(campusCategoryList.length == 0)
             ? nullui()
             : Column(children: [
                 Container(
@@ -368,23 +430,5 @@ class _CapmusPageState extends State<CapmusPage>
                           );
                         },
                       )),
-              ]));
-  }
-
-  Widget nullui() {
-    if (isCallingAPI == true) {
-      return buildLoadingWidget();
-    } else {
-      return const Center(
-        child: Text(
-          "Nothing to show",
-          style: TextStyle(
-              fontSize: 18,
-              color: Style.primaryfontcolor,
-              fontWeight: FontWeight.w500,
-              fontFamily: 'Economica'),
-        ),
-      );
-    }
-  }
-}
+              ]))
+*/

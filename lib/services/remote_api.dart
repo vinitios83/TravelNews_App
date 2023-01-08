@@ -171,5 +171,86 @@ class RemoteApi {
     }
     return null;
   }
+  Future<ProfileList?> getProfileList() async {
+    try {
+      var response = await Dio().get(AppConstants.getAdvisoryProfile);
+      if (response.statusCode == 200) {
+        var mydata = ProfileList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  Future<CourseList?> getExpertSkillList() async {
+    try {
+      var response = await Dio().get(AppConstants.getExperSkill);
+      if (response.statusCode == 200) {
+        var mydata = CourseList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  Future<CampusCategoryList?> getDestinationCategoryList() async {
+    try {
+      var response = await Dio().get(AppConstants.getDestinationCategoryList);
+      if (response.statusCode == 200) {
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  Future<CampusCategoryList?> getSubDestinationCategory(categoryid) async {
+    try {
+      var response = await Dio().get(
+        'https://travelworldonline.in/travelvideojson/destsubcat/?catid=$categoryid');
+              print(response);
+      if (response.statusCode == 200) {
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  Future<CampusCategoryList?> getSubsubDestinationList(categoryid,subCategoryid) async {
+    try {
+      var response = await Dio().get(
+        'https://travelworldonline.in/travelvideojson/destsubsubcat/?catid=$categoryid&subcatid=$subCategoryid');
+              print(response);
+      if (response.statusCode == 200) {
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim()));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
+  Future<CampusCategoryList?> getVideoDestinationList(categoryid,subCategoryid,subsubCtegoryid) async {
+    try {
+      var response = await Dio().get(
+        'https://travelworldonline.in/travelvideojson/destinationlist/?catid=$categoryid&subcatid=$subCategoryid&subsubcatid=$subsubCtegoryid');
+          
+        print(response);
+              
+        
+      if (response.statusCode == 200) {
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim().replaceAll(r"\'", "'")));
+        return mydata;
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: '$e');
+    }
+    return null;
+  }
   
 }

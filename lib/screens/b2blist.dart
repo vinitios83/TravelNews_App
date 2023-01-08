@@ -77,7 +77,7 @@ class _B2BListState extends State<B2BList> {
             backgroundColor: Style.backgroundcolor,
             bottomNavigationBar: const MyBannerAds(),
             appBar: AppBar(
-              backgroundColor: Style.appbarcolor,
+              backgroundColor: Color.fromARGB(255, 77, 50, 50),
               title: const Text(
                 'Deals',
                 style: TextStyle(
@@ -390,19 +390,19 @@ class _B2BListState extends State<B2BList> {
                                             B2BPackage(
                                               org: widget.association,
                                               dealType: DealType.DEAL,
-                                              userName: widget.userid,
-                                              password: widget.password,
+                                              userName: '',
+                                              password: '',
                                             ),
                                             B2BHotel(
                                               org: widget.association,
                                               dealType: DealType.DEAL,
-                                              userName: widget.userid,
-                                              password: widget.password,
+                                              userName: '',
+                                              password: '',
                                             ),
                                             B2BTransport(
                                               org: widget.association,
-                                              username: widget.userid,
-                                              password: widget.password,
+                                              username: '',
+                                              password: '',
                                             ),
                                           ],
                                         ),

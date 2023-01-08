@@ -14,6 +14,7 @@ class AssociationController extends GetxController {
   RxString passwordMessage = ''.obs;
   RxString selectedAType = 'National'.obs;
   RxString appBarTitle = 'ASSOCIATIONS'.obs;
+  Association? b2bAssociation;
 
   @override
   void onInit() {
@@ -34,6 +35,8 @@ class AssociationController extends GetxController {
       if (posts != null) {
         associationList.addAll(posts);
       }
+      b2bAssociation = associationList.firstWhere((element) => element.name == 'FAITH');
+      associationList.removeWhere((element) => element.name == 'FAITH');
     } finally {
       isLoading(false);
     }

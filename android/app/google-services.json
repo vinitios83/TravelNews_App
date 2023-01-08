@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:196473631952:android:3138f6303ebb929ed91ad5",
         "android_client_info": {
-          "package_name": "com.example.travelworldonline"
+          "package_name": "com.travel.travelworldonline"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "196473631952-pgombs9vltupe44o5hp4bp7aoiatkhkd.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.travelworldonline",
+            "package_name": "com.travel.travelworldonline",
             "certificate_hash": "1046460022dea2afc498d370de38a44cc3981a7e"
           }
         },

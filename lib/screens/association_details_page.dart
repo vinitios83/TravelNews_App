@@ -122,6 +122,7 @@ class _AssociationDetailPageState extends State<AssociationDetailPage> {
                   children: [
                     SizedBox(
                         height: MediaQuery.of(context).size.height / 3,
+                        width: MediaQuery.of(context).size.width,
                         child: const Header()),
                     const Divider(
                       height: 1.5,
@@ -252,7 +253,7 @@ class B2BHomeCards extends StatelessWidget {
     int aID = int.parse(association.id);
     Size screenSize = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(color: Style.othertabbarcolor),
+      decoration: const BoxDecoration(color: Style.headerYellowcolor),
       height: 35,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -261,16 +262,16 @@ class B2BHomeCards extends StatelessWidget {
             onTap: () => Get.to(() => CircularUpdateScreen(aId: aID, index: 0)),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(4),
-                boxShadow: const [
-                  BoxShadow(
-                    blurRadius: 4.0,
-                    spreadRadius: 1.0,
-                    color: Style.appbarcolor,
-                  )
-                ],
-              ),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Text(
@@ -284,25 +285,23 @@ class B2BHomeCards extends StatelessWidget {
             ),
           ),
           const VerticalDivider(
-            thickness: 2,
-            endIndent: 7,
-            indent: 7,
-            color: Style.othertabbarcolor,
-          ),
+                        color: Style.headerYellowcolor,
+                        width: 5.0,
+                          ),
           InkWell(
             onTap: () => Get.to(() => CircularUpdateScreen(aId: aID, index: 1)),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(4),
-                boxShadow: const [
-                  BoxShadow(
-                    blurRadius: 4.0,
-                    spreadRadius: 1.0,
-                    color: Style.appbarcolor,
-                  )
-                ],
-              ),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Text(
@@ -316,10 +315,9 @@ class B2BHomeCards extends StatelessWidget {
             ),
           ),
           const VerticalDivider(
-              thickness: 2,
-              endIndent: 7,
-              indent: 7,
-              color: Style.othertabbarcolor),
+                        color: Style.headerYellowcolor,
+                        width: 5.0,
+                          ),
           InkWell(
             onTap: () => Get.to(
               () => B2BList(
@@ -330,16 +328,16 @@ class B2BHomeCards extends StatelessWidget {
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(4),
-                boxShadow: const [
-                  BoxShadow(
-                    blurRadius: 4.0,
-                    spreadRadius: 1.0,
-                    color: Style.appbarcolor,
-                  )
-                ],
-              ),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Text(
@@ -353,10 +351,9 @@ class B2BHomeCards extends StatelessWidget {
             ),
           ),
           const VerticalDivider(
-              thickness: 2,
-              endIndent: 7,
-              indent: 7,
-              color: Style.othertabbarcolor),
+                        color: Style.headerYellowcolor,
+                        width: 5.0,
+                          ),
           InkWell(
             onTap: () => Get.to(
               () => MemberListPage(
@@ -367,16 +364,16 @@ class B2BHomeCards extends StatelessWidget {
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(4),
-                boxShadow: const [
-                  BoxShadow(
-                    blurRadius: 4.0,
-                    spreadRadius: 1.0,
-                    color: Style.appbarcolor,
-                  )
-                ],
-              ),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Text(
@@ -390,10 +387,9 @@ class B2BHomeCards extends StatelessWidget {
             ),
           ),
           const VerticalDivider(
-              thickness: 2,
-              endIndent: 7,
-              indent: 7,
-              color: Style.othertabbarcolor),
+                        color: Style.headerYellowcolor,
+                        width: 5.0,
+                          ),
           InkWell(
             onTap: () => Get.to(
               () => CommonWebView(
@@ -403,16 +399,16 @@ class B2BHomeCards extends StatelessWidget {
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(4),
-                boxShadow: const [
-                  BoxShadow(
-                    blurRadius: 4.0,
-                    spreadRadius: 1.0,
-                    color: Style.appbarcolor,
-                  )
-                ],
-              ),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Text(

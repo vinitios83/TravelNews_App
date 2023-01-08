@@ -42,4 +42,7 @@ abstract class AppConstants {
   static const adsBaseUrl = 'https://travelworldonline.in/app_ads/';
 
   static const getCampusCategoryList = 'https://travelworldonline.in/travelvideojson/videocat/';
+  static const getAdvisoryProfile = 'https://travelworldonline.in/travelvideojson/adboard/';
+  static const getExperSkill = 'https://travelworldonline.in/travelvideojson/courselist/';
+  static const getDestinationCategoryList = 'https://travelworldonline.in/travelvideojson/destcat/';
 }

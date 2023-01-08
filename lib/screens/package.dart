@@ -19,26 +19,14 @@ class B2BPackage extends StatelessWidget {
   final String password;
 
   final B2BController b2bController = Get.put(B2BController());
+Future<void> loadInitalData() async {
+    await b2bController.fetchB2BDeals();
+  }
 
   @override
   Widget build(BuildContext context) {
+    // loadInitalData();
     return Scaffold(
-      // floatingActionButton: (org.name == 'FAITH')
-      //     ? null
-      //     : FloatingActionButton(
-      //         child: const Icon(Icons.add),
-      //         backgroundColor: Color(0xff0d0101),
-      //         onPressed: () {
-      //           Get.to(
-      //             () => CreateDealsScreen(
-      //               index: 0,
-      //               association: org,
-      //               username: userName,
-      //               password: password,
-      //             ),
-      //           );
-      //         },
-      //       ),
       body: (b2bController.b2bListPackages.isEmpty)
           ? const Center(
               child: Text('No Data'),

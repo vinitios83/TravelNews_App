@@ -15,6 +15,15 @@ import '../services/associatin_helper.dart';
 import '../widget/login_dialogue.dart';
 import 'association_details_page.dart';
 import 'b2b_home.dart';
+import 'package.dart';
+import '../../models/deal_type.dart';
+import 'hotel.dart';
+import 'package:travel_app/screens/transport.dart';
+import '../widget/create_hotel.dart';
+import '../widget/create_package.dart';
+import '../widget/create_transport.dart';
+import '../widget/mydeal_page.dart';
+import '../../controller/b2b_controller.dart';
 
 class AssociationPage extends StatefulWidget {
   const AssociationPage({Key? key}) : super(key: key);
@@ -29,15 +38,33 @@ class _AssociationPageState extends State<AssociationPage>
       Get.put(AssociationController());
   final controller = PageController(initialPage: 0);
   final seccontroller = PageController(initialPage: 0);
-
+  final buyercontroller = PageController(initialPage: 0);
+  final thirdcontroller = PageController(initialPage: 0);
+  final fourthcontroller = PageController(initialPage: 0);
+  final selleroffercontroller = PageController(initialPage: 0);
+  final sellercreatecontroller = PageController(initialPage: 0);
+  final myoffersellercontroller = PageController(initialPage: 0);
+  final B2BController b2bController = Get.put(B2BController());
+late Box<UserModel> userBox;
   var currentPage = 0;
   var subPage = 0;
+UserModel? user;
+
+Future<void> loadInitalData() async {
+    await b2bController.fetchB2BDeals();
+    b2bController.fetchFavDeals(
+      id: associationController.b2bAssociation?.id ?? '',
+      userid: '',
+      password: '',
+    );
+  }
 
   @override
   void initState() {
     super.initState();
 
     associationController.appBarTitle.value = 'ASSOCIATIONS';
+    
   }
 
   @override
@@ -47,6 +74,10 @@ class _AssociationPageState extends State<AssociationPage>
 
   @override
   Widget build(BuildContext context) {
+    loadInitalData();
+    userBox = Hive.box<UserModel>(userBoxName);
+    int len = userBox.length;
+    user = userBox.get(associationController.b2bAssociation?.id ?? "");
     return Scaffold(
         backgroundColor: Style.backgroundcolor,
         appBar: AppBar(
@@ -428,10 +459,13 @@ class _AssociationPageState extends State<AssociationPage>
                             const AssociationList(selectedTabName: 'National',),
                             const AssociationList(selectedTabName: 'Regional'),
                             const AssociationList(selectedTabName: 'International'),
-                            Padding(padding: EdgeInsets.only(top: 15),
-                            child: Column(
+                            Padding(padding: EdgeInsets.only(top: 0),
+                            child: (len == 0 || associationController.b2bAssociation == null) ? Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                SizedBox(
+                                  height: 15,
+                                ),
                                 Center(
                               child: InkWell(
                               onTap: (() {
@@ -471,12 +505,91 @@ class _AssociationPageState extends State<AssociationPage>
                               ),
                             const Image(image: AssetImage('assets/imgBuyer.jpeg'))
                               ],
+                            ) : Column(
+                          children: [
+                            Container(
+                              height: 35,
+                              width: MediaQuery.of(context).size.width,
+                              decoration:
+                                  const BoxDecoration(color: Style.othertabbarcolor),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  InkWell(
+                                      onTap: (() {
+                                        buyercontroller.animateToPage(0,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Demands',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                  const VerticalDivider(
+                                      thickness: 2,
+                                      endIndent: 7,
+                                      indent: 7,
+                                      color: Style.verticaldividercolor),
+                                  InkWell(
+                                      onTap: (() {
+                                        buyercontroller.animateToPage(1,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Create Demands',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                  const VerticalDivider(
+                                      thickness: 2,
+                                      endIndent: 7,
+                                      indent: 7,
+                                      color: Style.verticaldividercolor),
+                                  InkWell(
+                                      onTap: (() {
+                                        buyercontroller.animateToPage(2,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('My Demands',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
                             ),
+                            Expanded(
+                              child: PageView(
+                                controller: buyercontroller,
+                                children: [
+                                  Container(
+                                    child: const Image(image: AssetImage('assets/imgBuyer.jpeg')),
+                                  ),
+                                  Container(
+                                    child: const Image(image: AssetImage('assets/imgBuyer.jpeg')),
+                                  ),
+                                  Container(
+                                    child: const Image(image: AssetImage('assets/imgBuyer.jpeg')),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                             ),
-                            Padding(padding: EdgeInsets.only(top: 15),
-                            child: Column(
+                            Padding(padding: EdgeInsets.only(top: 0),
+                            child: (len == 0 || associationController.b2bAssociation == null) ? Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                SizedBox(
+                                  height: 15,
+                                ),
                                 Center(
                               child: InkWell(
                               onTap: (() {
@@ -516,7 +629,399 @@ class _AssociationPageState extends State<AssociationPage>
                               ),
                             const Image(image: AssetImage('assets/imgSeller.jpeg'))
                               ],
+                            ) :  Obx(
+      () {
+        if (b2bController.isLoading.isTrue) {
+          return Scaffold(
+            body: Center(
+              child: buildLoadingWidget(),
+            ),
+          );
+        } else {
+                            
+                            
+                            
+                            
+                            return Column(
+                          children: [
+                            Container(
+                              height: 35,
+                              width: MediaQuery.of(context).size.width,
+                              decoration:
+                                  const BoxDecoration(color: Style.headerYellowcolor),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  InkWell(
+                                      onTap: (() {
+                                        thirdcontroller.animateToPage(0,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Offers',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                  const VerticalDivider(
+                                      thickness: 2,
+                                      endIndent: 7,
+                                      indent: 7,
+                                      color: Style.verticaldividercolor),
+                                  InkWell(
+                                      onTap: (() {
+                                        thirdcontroller.animateToPage(1,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Create Offers',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                  const VerticalDivider(
+                                      thickness: 2,
+                                      endIndent: 7,
+                                      indent: 7,
+                                      color: Style.verticaldividercolor),
+                                  InkWell(
+                                      onTap: (() {
+                                        thirdcontroller.animateToPage(2,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('My Offers',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
                             ),
+                            Expanded(
+                              child: PageView(
+                                controller: thirdcontroller,
+                                children: [
+                                  Column(
+                                    children: [
+                                      Container(
+                                        height: 35,
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        decoration: const BoxDecoration(
+                                            color: Style.othertabbarcolor),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            InkWell(
+                                                onTap: (() {
+                                                  selleroffercontroller
+                                                      .animateToPage(0,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Packages',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                            const VerticalDivider(
+                                                thickness: 2,
+                                                endIndent: 7,
+                                                indent: 7,
+                                                color:
+                                                    Style.verticaldividercolor),
+                                            InkWell(
+                                                onTap: (() {
+                                                  selleroffercontroller
+                                                      .animateToPage(1,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Hotels',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                            const VerticalDivider(
+                                                thickness: 2,
+                                                endIndent: 7,
+                                                indent: 7,
+                                                color:
+                                                    Style.verticaldividercolor),
+                                            InkWell(
+                                                onTap: (() {
+                                                  selleroffercontroller
+                                                      .animateToPage(2,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Transport',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: PageView(
+                                          controller: selleroffercontroller,
+                                          children: [
+                                            B2BPackage(
+                                              org: associationController.b2bAssociation!,
+                                              dealType: DealType.DEAL,
+                                              userName: '',
+                                              password: '',
+                                            ),
+                                            B2BHotel(
+                                              org: associationController.b2bAssociation!,
+                                              dealType: DealType.DEAL,
+                                              userName: '',
+                                              password: '',
+                                            ),
+                                            B2BTransport(
+                                              org: associationController.b2bAssociation!,
+                                              username: '',
+                                              password: '',
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Container(
+                                        height: 35,
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        decoration: const BoxDecoration(
+                                            color: Style.othertabbarcolor),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            InkWell(
+                                                onTap: (() {
+                                                  sellercreatecontroller
+                                                      .animateToPage(0,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Packages',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                            const VerticalDivider(
+                                                thickness: 2,
+                                                endIndent: 7,
+                                                indent: 7,
+                                                color:
+                                                    Style.verticaldividercolor),
+                                            InkWell(
+                                                onTap: (() {
+                                                  sellercreatecontroller
+                                                      .animateToPage(1,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Hotels',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                            const VerticalDivider(
+                                                thickness: 2,
+                                                endIndent: 7,
+                                                indent: 7,
+                                                color:
+                                                    Style.verticaldividercolor),
+                                            InkWell(
+                                                onTap: (() {
+                                                  sellercreatecontroller
+                                                      .animateToPage(2,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Transport',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: PageView(
+                                          controller: sellercreatecontroller,
+                                          children: [
+                                            PackageCreateScreen(
+                                              association: associationController.b2bAssociation!,
+                                              username: user?.aId ?? "",
+                                              password: user?.password ?? "",
+                                            ),
+                                            CreateHotelScreen(
+                                              association: associationController.b2bAssociation!,
+                                              username: user?.aId ?? "",
+                                              password: user?.password ?? "",
+                                            ),
+                                            CreateTransportScreen(
+                                              association: associationController.b2bAssociation!,
+                                              username: user?.aId ?? "",
+                                              password: user?.password ?? "",
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Container(
+                                        height: 35,
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        decoration: const BoxDecoration(
+                                            color: Style.othertabbarcolor),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            InkWell(
+                                                onTap: (() {
+                                                  myoffersellercontroller
+                                                      .animateToPage(0,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Packages',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                            const VerticalDivider(
+                                                thickness: 2,
+                                                endIndent: 7,
+                                                indent: 7,
+                                                color:
+                                                    Style.verticaldividercolor),
+                                            InkWell(
+                                                onTap: (() {
+                                                  myoffersellercontroller
+                                                      .animateToPage(1,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Hotels',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                            const VerticalDivider(
+                                                thickness: 2,
+                                                endIndent: 7,
+                                                indent: 7,
+                                                color:
+                                                    Style.verticaldividercolor),
+                                            InkWell(
+                                                onTap: (() {
+                                                  myoffersellercontroller
+                                                      .animateToPage(2,
+                                                          duration:
+                                                              const Duration(
+                                                                  seconds: 1),
+                                                          curve:
+                                                              Curves.easeInOut);
+                                                }),
+                                                child: const Text('Transport',
+                                                    style: TextStyle(
+                                                        color: Style
+                                                            .tabbarfontcolor,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold))),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: PageView(
+                                          controller: myoffersellercontroller,
+                                          children: [
+                                            MyDealPage(
+                                              association: associationController.b2bAssociation!,
+                                              password: user?.password ?? "",
+                                              userName: user?.aId ?? "",
+                                              initialIndex: 0,
+                                            ),
+                                            MyDealPage(
+                                              association: associationController.b2bAssociation!,
+                                              password: user?.password ?? "",
+                                              userName: user?.aId ?? "",
+                                              initialIndex: 1,
+                                            ),
+                                            MyDealPage(
+                                              association: associationController.b2bAssociation!,
+                                              password: user?.password ?? "",
+                                              userName: user?.aId ?? "",
+                                              initialIndex: 2,
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        );
+        }}),
                             ),
                           ],
                           onPageChanged: (value) {
@@ -576,30 +1081,102 @@ class _AssociationPageState extends State<AssociationPage>
                               ],
                             ),
                             ),
-                  Padding(padding: EdgeInsets.only(top: 15),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Center(
-                              child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 4, horizontal: 8),
-                                  child: Text(
-                                    'Coming Soon',
-                                    style: TextStyle(
-                                        color: Style.tabbarfontcolor,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                            ),
-                            const Divider(
-                                height: 8,
+                  Obx(
+      () {
+        if (b2bController.isLoading.isTrue) {
+          return Scaffold(
+            body: Center(
+              child: buildLoadingWidget(),
+            ),
+          );
+        } else {
+          return Column(
+                          children: [
+                            Container(
+                              height: 35,
+                              width: MediaQuery.of(context).size.width,
+                              decoration:
+                                  const BoxDecoration(color: Style.othertabbarcolor),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  InkWell(
+                                      onTap: (() {
+                                        fourthcontroller.animateToPage(0,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Packages',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                  const VerticalDivider(
+                                      thickness: 2,
+                                      endIndent: 7,
+                                      indent: 7,
+                                      color: Style.verticaldividercolor),
+                                  InkWell(
+                                      onTap: (() {
+                                        fourthcontroller.animateToPage(1,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Hotel Deal',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                  const VerticalDivider(
+                                      thickness: 2,
+                                      endIndent: 7,
+                                      indent: 7,
+                                      color: Style.verticaldividercolor),
+                                  InkWell(
+                                      onTap: (() {
+                                        fourthcontroller.animateToPage(2,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Transport',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                  const VerticalDivider(
+                                      thickness: 2,
+                                      endIndent: 7,
+                                      indent: 7,
+                                      color: Style.verticaldividercolor),
+                                  InkWell(
+                                      onTap: (() {
+                                        fourthcontroller.animateToPage(3,
+                                            duration:
+                                                const Duration(seconds: 1),
+                                            curve: Curves.easeInOut);
+                                      }),
+                                      child: const Text('Flight deals',
+                                          style: TextStyle(
+                                              color: Style.tabbarfontcolor,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold)))
+                                ],
                               ),
-                            const Image(image: AssetImage('assets/imgSpecialOffer.jpeg'))
-                              ],
                             ),
-                            ),
+                            Expanded(
+                              child: PageView(
+                                controller: fourthcontroller,
+                                children: const [],
+                              ),
+                            )
+                          ],
+                        );
+        }
+      },
+    ),
                 ],
               ),
             )
