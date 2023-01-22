@@ -138,54 +138,6 @@ class _AssociationDetailPageState extends State<AssociationDetailPage> {
                       password: widget.password,
                       userName: widget.userName,
                     ),
-                    // Divider(thickness: 1.5, color: Style.dividercolor),
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            CachedNetworkImage(
-                              imageUrl: widget.association.imageUrl,
-                              height: 200,
-                              width: 250,
-                              fit: BoxFit.contain,
-                              placeholder: (context, url) => SizedBox(
-                                height: 20,
-                                width: 40,
-                                child: Center(child: buildLoadingWidget()),
-                              ),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                            Text(
-                              widget.association.name,
-                              style: const TextStyle(
-                                fontSize: 45,
-                              ),
-                            )
-                          ],
-                        ),
-                        //     HtmlWidget(
-                        // widget.circular[index].text
-                        //     .replaceAll('GLOBALBREAK', '<br>'),
-                        // onTapUrl: (url) {
-                        //   _launchURL(url);
-                        //   return true;
-                        // },
-                        //   textStyle: const TextStyle(
-                        //       fontSize: 17,
-                        //       height: 1.2,
-                        //       letterSpacing: 0.2,
-                        //       color: Style.primaryfontcolor,
-                        //       fontFamily: 'Calibri Regular'),
-                        // ),
-
-                        // CommonWebView(
-                        //     url: AssociationHelper.aboutUS +
-                        //         widget.association.id,
-                        //     association: widget.association),
-                      ],
-                    ),
                   ],
                 ),
               );
@@ -253,9 +205,266 @@ class B2BHomeCards extends StatelessWidget {
     int aID = int.parse(association.id);
     Size screenSize = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(color: Style.headerYellowcolor),
-      height: 35,
-      child: Row(
+        decoration: const BoxDecoration(color:Colors.white),
+        height: screenSize.height - 420,
+        child: GridView.count(
+          primary: false,
+          padding: const EdgeInsets.all(20),
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          crossAxisCount: 3,
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.white,
+              child: InkWell(
+            onTap: () => Get.to(() => CircularUpdateScreen(aId: aID, index: 0)),
+            child: Container(
+              decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
+              child: Center(
+                // padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                child: Column(
+                  children: [
+                    Image.asset("assets/circulars.png",height: 60,width: 60),
+                    Text(
+                  'Circular',
+                  style: TextStyle(
+                      color: Style.tabbarfontcolor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.white,
+              child: InkWell(
+            onTap: () => Get.to(() => CircularUpdateScreen(aId: aID, index: 1)),
+            child: Container(
+              decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
+              child: Center(
+                // padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                child: Column(
+                  children: [
+                    Image.asset("assets/updates.png",height: 60,width: 60),
+                    Text(
+                  'Updates',
+                  style: TextStyle(
+                      color: Style.tabbarfontcolor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.white,
+              child: InkWell(
+            onTap: () => Get.to(
+              () => B2BList(
+                association: association,
+                userid: userName,
+                password: password,
+              ),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
+              child: Center(
+                // padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                child: Column(
+                  children: [
+                    Image.asset("assets/b2b.png",height: 60,width: 60),
+                    Text(
+                  'B2B',
+                  style: TextStyle(
+                      color: Style.tabbarfontcolor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.white,
+              child: InkWell(
+            onTap: () => Get.to(
+              () => MemberListPage(
+                association: association,
+                userName: userName,
+                password: password,
+              ),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
+              child: Center(
+                // padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                child: Column(
+                  children: [
+                    Image.asset("assets/directory.png",height: 60,width: 60),
+                    Text(
+                  'Directory',
+                  style: TextStyle(
+                      color: Style.tabbarfontcolor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.white,
+              child: InkWell(
+            onTap: () => Get.to(
+              () => CommonWebView(
+                url: AssociationHelper.aboutUS + association.id,
+                association: association,
+              ),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 0.0,
+                                spreadRadius: 0.0,
+                                color: Style.backgroundcolor,
+                              )
+                            ],
+                          ),
+              child: Center(
+                // padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                child: Column(
+                  children: [
+                    Image.asset("assets/about_iato.png",height: 60,width: 60),
+                    Text(
+                  'About US',
+                  style: TextStyle(
+                      color: Style.tabbarfontcolor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.white,
+              child: const Text(''),
+            ),
+          ],
+        ));
+  }
+}
+
+class Header extends StatefulWidget {
+  const Header({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<Header> createState() => _HeaderState();
+}
+
+class _HeaderState extends State<Header> {
+  VersionController versionController = Get.put(VersionController());
+  bool isInitialised = false;
+
+  late YoutubePlayerController controller;
+
+  @override
+  void initState() {
+    playDefaultVideo();
+    super.initState();
+  }
+
+  Future<void> playDefaultVideo() async {
+    await Future.delayed(const Duration(seconds: 5));
+    controller = YoutubePlayerController.fromVideoId(
+        videoId: versionController.youtubedefault.value,
+        params: const YoutubePlayerParams(
+          enableJavaScript: true,
+          showControls: true,
+          showFullscreenButton: true,
+        ));
+
+    setState(() {
+      isInitialised = true;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return isInitialised
+        ? YoutubePlayerIFrame(
+            controller: controller,
+            aspectRatio: 16 / 9,
+          )
+        : buildLoadingWidget();
+  }
+}
+
+/*
+Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InkWell(
@@ -423,53 +632,4 @@ class B2BHomeCards extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class Header extends StatefulWidget {
-  const Header({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<Header> createState() => _HeaderState();
-}
-
-class _HeaderState extends State<Header> {
-  VersionController versionController = Get.put(VersionController());
-  bool isInitialised = false;
-
-  late YoutubePlayerController controller;
-
-  @override
-  void initState() {
-    playDefaultVideo();
-    super.initState();
-  }
-
-  Future<void> playDefaultVideo() async {
-    await Future.delayed(const Duration(seconds: 5));
-    controller = YoutubePlayerController.fromVideoId(
-        videoId: versionController.youtubedefault.value,
-        params: const YoutubePlayerParams(
-          enableJavaScript: true,
-          showControls: true,
-          showFullscreenButton: true,
-        ));
-
-    setState(() {
-      isInitialised = true;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return isInitialised
-        ? YoutubePlayerIFrame(
-            controller: controller,
-            aspectRatio: 16 / 9,
-          )
-        : buildLoadingWidget();
-  }
-}
+*/

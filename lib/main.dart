@@ -11,7 +11,7 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'models/user_model.dart';
-import 'screens/home_page.dart';
+import 'screens/SplashPage.dart';
 
 const String userBoxName = 'userbox';
 const String notificationBox = 'notificationBox';
@@ -48,6 +48,6 @@ class MyApp extends StatelessWidget {
             textTheme:
                 GoogleFonts.economicaTextTheme(Theme.of(context).textTheme)),
         debugShowCheckedModeBanner: false,
-        home: const HomePage());
+        home: const SplashPage());
   }
 }

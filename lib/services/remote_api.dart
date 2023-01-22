@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -244,7 +245,8 @@ class RemoteApi {
               
         
       if (response.statusCode == 200) {
-        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim().replaceAll(r"\'", "'")));
+        log(response.data.trim());
+        var mydata = CampusCategoryList.fromJson(json.decode(response.data.trim().replaceAll("\r\n", "")));
         return mydata;
       }
     } catch (e) {

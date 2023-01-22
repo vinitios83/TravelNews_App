@@ -1,16 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/gestures.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
 import 'package:travel_app/element/loader.dart';
-import 'package:travel_app/main.dart';
 import 'package:travel_app/utility/colors.dart';
 import 'package:travel_app/models/CampusDataModel.dart';
 import '../services/remote_api.dart';
-import '../utility/constant.dart';
-import 'package:get/get.dart';
-import 'package:travel_app/widget/live_tv.dart';
-import 'package:travel_app/screens/YouTubePlayerPage.dart';
 import '../widget/my_banners_ads.dart';
 import 'package:travel_app/widget/HtmlWidget.dart';
 
@@ -45,6 +38,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
   }
 
   fetchDestinationCategoryList() async {
+    this.videoCategoryList.clear();
     await RemoteApi().getDestinationCategoryList().then((value) => {
           campusCategoryList = value?.campusCategoryList ?? [],
           if (campusCategoryList.length == 0)
@@ -60,6 +54,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
 
   fetchSubDestinationCategoryList() async {
     isCallingAPI = true;
+    this.videoCategoryList.clear();
     await RemoteApi()
         .getSubDestinationCategory(campusCategoryList[currentPage].id)
         .then((value) => {
@@ -77,6 +72,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
 
   fetchSubSubDestinationList() async {
     isCallingAPI = true;
+    this.videoCategoryList.clear();
     await RemoteApi()
         .getSubsubDestinationList(campusCategoryList[currentPage].id,
             subCampusCategoryList[subPage].id)
@@ -195,6 +191,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
                         separatorBuilder: (BuildContext context, int index) {
                           return const VerticalDivider(
                             width: 8,
+                            color: Style.headerYellowcolor,
                           );
                         },
                         itemCount: campusCategoryList.length),
@@ -265,6 +262,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
                                   (BuildContext context, int index) {
                                 return const VerticalDivider(
                                   width: 8,
+                                  color: Style.headerYellowcolor,
                                 );
                               },
                               itemCount: subCampusCategoryList.length),
@@ -334,6 +332,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
                                   (BuildContext context, int index) {
                                 return const VerticalDivider(
                                   width: 8,
+                                  color: Style.headerYellowcolor,
                                 );
                               },
                               itemCount: subsubCategoryList.length),
@@ -346,7 +345,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
                     ? nullui()
                     : Container(
                         alignment: Alignment.center,
-                        height: MediaQuery.of(context).size.height - 330,
+                        height: MediaQuery.of(context).size.height * 0.6,
                         width: MediaQuery.of(context).size.width,
                         child: Padding(
                           padding: EdgeInsets.all(5),
@@ -377,6 +376,7 @@ class _BeDestinationPageState extends State<BeDestinationPage>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Flexible(
+                                              flex: 10,
                                               child: Text(
                                               videoCategoryList[index].place ?? "",
                                               style: const TextStyle(
@@ -391,7 +391,12 @@ class _BeDestinationPageState extends State<BeDestinationPage>
                                               height: 10,
                                             ),
                                             Flexible(
+                                              flex: 90,
+                                              child: SingleChildScrollView(
+                                              padding: EdgeInsets.all(2),
+                                              scrollDirection: Axis.vertical,
                                               child: HtmlView(strHtml: videoCategoryList[index].detail ?? "",)
+                                            )
                                             ),
                                           ],
                                         ),
@@ -403,9 +408,10 @@ class _BeDestinationPageState extends State<BeDestinationPage>
                                   (BuildContext context, int index) {
                                 return const VerticalDivider(
                                   width: 8,
+                                  color: Colors.white,
                                 );
                               },
-                              itemCount: subCampusCategoryList.length),
+                              itemCount: videoCategoryList.length),
                         ),
                       ),
               ]));

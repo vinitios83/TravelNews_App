@@ -30,7 +30,7 @@ class _CapmusPageState extends State<CapmusPage>
   // List<CampusCategory> subCampusCategoryList = [];
   // List<CampusCategory> videoList = [];
   // var isCallingAPI = true;
-  var arrOptions = ['Our Advisory Board','Be Destination','Expert Skills'];
+  var arrOptions = ['Our Advisory Board','Destination Specialist Program','Skill Development'];
   @override
   void initState() {
     super.initState();
