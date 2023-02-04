@@ -176,7 +176,8 @@ class CircularTile extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(2),
             ),
-            child: Row(
+            child: Padding(padding: EdgeInsets.all(8),
+              child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -236,6 +237,7 @@ class CircularTile extends StatelessWidget {
                 ),
               ],
             ),
+            )
           ),
           Positioned(
             top: 0,

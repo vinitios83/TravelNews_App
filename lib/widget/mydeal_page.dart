@@ -2,6 +2,7 @@ import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travel_app/element/loader.dart';
+import 'package:travel_app/utility/colors.dart';
 import '../models/deal_type.dart';
 import '../controller/b2b_controller.dart';
 import '../models/association_model.dart';
@@ -28,22 +29,26 @@ class MyDealPage extends StatefulWidget {
 }
 
 class _MyDealPageState extends State<MyDealPage> {
-  final B2BController b2bController = Get.find();
+  final B2BController b2bController = Get.put(B2BController());
   @override
   initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      b2bController.fetchMyDeals(
+    b2bController.fetchMyDeals(
         userid: widget.userName,
-      );
-    });
+      ).then((value){
+        setState(() {
+          
+        });
+      });
   }
+
 
   @override
   Widget build(BuildContext context) {
     List<Tab> tabs = [
       const Tab(
         text: 'PACKAGES',
+        
       ),
       const Tab(
         text: 'HOTELS',
@@ -53,17 +58,11 @@ class _MyDealPageState extends State<MyDealPage> {
       ),
     ];
 
-    return Obx(
-      () {
-        if (b2bController.isLoading.value) {
-          return Scaffold(
-            body: Center(child: buildLoadingWidget()),
-          );
-        } else {
+    // q
           return SafeArea(
             child: Scaffold(
               body: SizedBox(
-                height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height - 200,
                 width: MediaQuery.of(context).size.width,
                 child: MyDealsTabBar(
                   tabs: tabs,
@@ -78,9 +77,9 @@ class _MyDealPageState extends State<MyDealPage> {
               ),
             ),
           );
-        }
-      },
-    );
+    //     }
+    //   },
+    // );
   }
 }
 
@@ -114,9 +113,9 @@ class MyDealsTabBar extends StatelessWidget {
       tabBarProperties: TabBarProperties(
         height: 45,
         background: Container(
-            // color: AppTheme.kPrimaryColor,
+            color: Style.appbarcolor,
             ),
-        indicatorColor: Colors.transparent,
+        indicatorColor: Colors.white,
         padding: const EdgeInsets.all(8),
         labelStyle: const TextStyle(
           color: Colors.white,
@@ -162,16 +161,17 @@ class MyPackage extends StatelessWidget {
     required this.userName,
     required this.password,
   }) : super(key: key);
-  final List<Hotel> package;
+  List<Hotel> package;
   final Association org;
   final String userName;
   final String password;
-  final B2BController b2bController = Get.find();
+  final B2BController b2bController = Get.put(B2BController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(
+      body: 
+      Obx(
         () {
           if (b2bController.isLoading.isTrue) {
             return const Center(
@@ -180,6 +180,7 @@ class MyPackage extends StatelessWidget {
                   ),
             );
           } else {
+            // package = b2bController.myListPackages;
             return (package.isEmpty)
                 ? const Center(child: Text('No Data'))
                 : ListView.builder(
@@ -225,11 +226,11 @@ class MyHotel extends StatelessWidget {
     required this.userName,
     required this.password,
   }) : super(key: key);
-  final List<Hotel> hotel;
+  List<Hotel> hotel;
   final Association org;
   final String userName;
   final String password;
-  final B2BController b2bController = Get.find();
+  final B2BController b2bController = Get.put(B2BController());
 
   @override
   Widget build(BuildContext context) {
@@ -243,6 +244,7 @@ class MyHotel extends StatelessWidget {
                   ),
             );
           } else {
+            // hotel = b2bController.myListHotel;
             return (hotel.isEmpty)
                 ? const Center(child: Text('No Data'))
                 : ListView.builder(
@@ -288,11 +290,11 @@ class MyTransport extends StatelessWidget {
     required this.userName,
     required this.password,
   }) : super(key: key);
-  final List<Transport> transport;
+  List<Transport> transport;
   final Association org;
   final String userName;
   final String password;
-  final B2BController b2bController = Get.find();
+  final B2BController b2bController = Get.put(B2BController());
   @override
   Widget build(BuildContext context) {
     return Obx(() {
@@ -303,6 +305,7 @@ class MyTransport extends StatelessWidget {
               ),
         );
       } else {
+        // transport = b2bController.myListTransport;
         return (transport.isEmpty)
             ? const Center(
                 child: Text('No Data'),

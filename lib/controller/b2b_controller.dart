@@ -211,10 +211,15 @@ class B2BController extends GetxController {
           myListTransport.add(transport);
         }
       }
+      return;
     } finally {
       isLoading(false);
+      return;
     }
+    
   }
+
+
 
   Future<String> deleteFavDeals({
     required String userid,

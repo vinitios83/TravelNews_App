@@ -860,110 +860,7 @@ class _AssociationPageState extends State<AssociationPage>
                                                       )
                                                     ],
                                                   ),
-                                                  Column(
-                                                    children: [
-                                                      Container(
-                                                        height: 35,
-                                                        width: MediaQuery.of(
-                                                                context)
-                                                            .size
-                                                            .width,
-                                                        decoration:
-                                                            const BoxDecoration(
-                                                                color: Style
-                                                                    .othertabbarcolor),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            InkWell(
-                                                                onTap: (() {
-                                                                  myoffersellercontroller.animateToPage(0,
-                                                                      duration: const Duration(
-                                                                          seconds:
-                                                                              1),
-                                                                      curve: Curves
-                                                                          .easeInOut);
-                                                                }),
-                                                                child: const Text(
-                                                                    'Packages',
-                                                                    style: TextStyle(
-                                                                        color: Style
-                                                                            .tabbarfontcolor,
-                                                                        fontSize:
-                                                                            20,
-                                                                        fontWeight:
-                                                                            FontWeight.bold))),
-                                                            const VerticalDivider(
-                                                                thickness: 2,
-                                                                endIndent: 7,
-                                                                indent: 7,
-                                                                color: Style
-                                                                    .verticaldividercolor),
-                                                            InkWell(
-                                                                onTap: (() {
-                                                                  myoffersellercontroller.animateToPage(1,
-                                                                      duration: const Duration(
-                                                                          seconds:
-                                                                              1),
-                                                                      curve: Curves
-                                                                          .easeInOut);
-                                                                }),
-                                                                child: const Text(
-                                                                    'Hotels',
-                                                                    style: TextStyle(
-                                                                        color: Style
-                                                                            .tabbarfontcolor,
-                                                                        fontSize:
-                                                                            20,
-                                                                        fontWeight:
-                                                                            FontWeight.bold))),
-                                                            const VerticalDivider(
-                                                                thickness: 2,
-                                                                endIndent: 7,
-                                                                indent: 7,
-                                                                color: Style
-                                                                    .verticaldividercolor),
-                                                            InkWell(
-                                                                onTap: (() {
-                                                                  myoffersellercontroller.animateToPage(2,
-                                                                      duration: const Duration(
-                                                                          seconds:
-                                                                              1),
-                                                                      curve: Curves
-                                                                          .easeInOut);
-                                                                }),
-                                                                child: const Text(
-                                                                    'Transport',
-                                                                    style: TextStyle(
-                                                                        color: Style
-                                                                            .tabbarfontcolor,
-                                                                        fontSize:
-                                                                            20,
-                                                                        fontWeight:
-                                                                            FontWeight.bold))),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      Expanded(
-                                                        child: PageView(
-                                                          controller:
-                                                              myoffersellercontroller,
-                                                          children: [
-                                                            MyDealPage(
-                                                              association:
-                                                                  associationController
-                                                                      .b2bAssociation!,
-                                                              password:
-                                                                  user?.password ??
-                                                                      "",
-                                                              userName:
-                                                                  user?.aId ??
-                                                                      "",
-                                                              initialIndex: 0,
-                                                            ),
-                                                            MyDealPage(
+                                                  MyDealPage(
                                                               association:
                                                                   associationController
                                                                       .b2bAssociation!,
@@ -975,23 +872,6 @@ class _AssociationPageState extends State<AssociationPage>
                                                                       "",
                                                               initialIndex: 1,
                                                             ),
-                                                            MyDealPage(
-                                                              association:
-                                                                  associationController
-                                                                      .b2bAssociation!,
-                                                              password:
-                                                                  user?.password ??
-                                                                      "",
-                                                              userName:
-                                                                  user?.aId ??
-                                                                      "",
-                                                              initialIndex: 2,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      )
-                                                    ],
-                                                  ),
                                                 ],
                                               ),
                                             )
@@ -1057,15 +937,7 @@ class _AssociationPageState extends State<AssociationPage>
                                                 'assets/imgSeller.jpeg'))
                                       ],
                                     )
-                                  : Obx(() {
-                                      if (b2bController.isLoading.isTrue) {
-                                        return Scaffold(
-                                          body: Center(
-                                            child: buildLoadingWidget(),
-                                          ),
-                                        );
-                                      } else {
-                                        return Column(
+                                  :  Column(
                                           children: [
                                             Container(
                                               height: 35,
@@ -1405,110 +1277,7 @@ class _AssociationPageState extends State<AssociationPage>
                                                       )
                                                     ],
                                                   ),
-                                                  Column(
-                                                    children: [
-                                                      Container(
-                                                        height: 35,
-                                                        width: MediaQuery.of(
-                                                                context)
-                                                            .size
-                                                            .width,
-                                                        decoration:
-                                                            const BoxDecoration(
-                                                                color: Style
-                                                                    .othertabbarcolor),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            InkWell(
-                                                                onTap: (() {
-                                                                  myoffersellercontroller.animateToPage(0,
-                                                                      duration: const Duration(
-                                                                          seconds:
-                                                                              1),
-                                                                      curve: Curves
-                                                                          .easeInOut);
-                                                                }),
-                                                                child: const Text(
-                                                                    'Packages',
-                                                                    style: TextStyle(
-                                                                        color: Style
-                                                                            .tabbarfontcolor,
-                                                                        fontSize:
-                                                                            20,
-                                                                        fontWeight:
-                                                                            FontWeight.bold))),
-                                                            const VerticalDivider(
-                                                                thickness: 2,
-                                                                endIndent: 7,
-                                                                indent: 7,
-                                                                color: Style
-                                                                    .verticaldividercolor),
-                                                            InkWell(
-                                                                onTap: (() {
-                                                                  myoffersellercontroller.animateToPage(1,
-                                                                      duration: const Duration(
-                                                                          seconds:
-                                                                              1),
-                                                                      curve: Curves
-                                                                          .easeInOut);
-                                                                }),
-                                                                child: const Text(
-                                                                    'Hotels',
-                                                                    style: TextStyle(
-                                                                        color: Style
-                                                                            .tabbarfontcolor,
-                                                                        fontSize:
-                                                                            20,
-                                                                        fontWeight:
-                                                                            FontWeight.bold))),
-                                                            const VerticalDivider(
-                                                                thickness: 2,
-                                                                endIndent: 7,
-                                                                indent: 7,
-                                                                color: Style
-                                                                    .verticaldividercolor),
-                                                            InkWell(
-                                                                onTap: (() {
-                                                                  myoffersellercontroller.animateToPage(2,
-                                                                      duration: const Duration(
-                                                                          seconds:
-                                                                              1),
-                                                                      curve: Curves
-                                                                          .easeInOut);
-                                                                }),
-                                                                child: const Text(
-                                                                    'Transport',
-                                                                    style: TextStyle(
-                                                                        color: Style
-                                                                            .tabbarfontcolor,
-                                                                        fontSize:
-                                                                            20,
-                                                                        fontWeight:
-                                                                            FontWeight.bold))),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      Expanded(
-                                                        child: PageView(
-                                                          controller:
-                                                              myoffersellercontroller,
-                                                          children: [
-                                                            MyDealPage(
-                                                              association:
-                                                                  associationController
-                                                                      .b2bAssociation!,
-                                                              password:
-                                                                  user?.password ??
-                                                                      "",
-                                                              userName:
-                                                                  user?.aId ??
-                                                                      "",
-                                                              initialIndex: 0,
-                                                            ),
-                                                            MyDealPage(
+                                                  MyDealPage(
                                                               association:
                                                                   associationController
                                                                       .b2bAssociation!,
@@ -1520,30 +1289,12 @@ class _AssociationPageState extends State<AssociationPage>
                                                                       "",
                                                               initialIndex: 1,
                                                             ),
-                                                            MyDealPage(
-                                                              association:
-                                                                  associationController
-                                                                      .b2bAssociation!,
-                                                              password:
-                                                                  user?.password ??
-                                                                      "",
-                                                              userName:
-                                                                  user?.aId ??
-                                                                      "",
-                                                              initialIndex: 2,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      )
-                                                    ],
-                                                  ),
                                                 ],
                                               ),
                                             )
                                           ],
-                                        );
-                                      }
-                                    }),
+                                        ),
+                
                             ),
                           ],
                           onPageChanged: (value) {
