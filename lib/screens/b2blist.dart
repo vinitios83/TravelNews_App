@@ -225,7 +225,8 @@ class _B2BListState extends State<B2BList> {
                               ),
                             ),
                             Expanded(
-                              child: PageView(
+                              child: 
+                              PageView(
                                 controller: seccontroller,
                                 children: [
                                   Container(

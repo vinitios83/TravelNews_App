@@ -43,7 +43,7 @@ class _HotelCardState extends State<HotelCard> {
   @override
   void initState() {
     super.initState();
-    b2bController.fetchB2BDeals();
+    // b2bController.fetchB2BDeals();
   }
 
   @override

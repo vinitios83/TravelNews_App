@@ -183,72 +183,53 @@ class MemberCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          padding: const EdgeInsets.fromLTRB(6, 0, 6, 8),
-          child: Card(
-            color: Colors.white,
-            child: SizedBox(
-              width: Get.width,
-              height: 86,
-              child: Row(
-                children: [
-                  (chapterChairman.photo != "")
-                      ? Container(
-                          margin: const EdgeInsets.fromLTRB(4, 4, 0, 4),
-                          child: CachedNetworkImage(
-                            imageUrl: chapterChairman.photo,
-                            height: 70,
-                            width: 60,
-                            fit: BoxFit.cover,
-                            placeholder: (context, url) => Container(
-                              height: 70,
-                              width: 60,
-                              margin: const EdgeInsets.all(6),
-                              // child:
-                              // Image.asset(AssetsHelper.memberPlaceholder),
-                            ),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
-                          ),
-                        )
-                      : Container(
-                          height: 70,
-                          width: 60,
-                          margin: const EdgeInsets.all(6),
-                          // child: Image.asset(AssetsHelper.memberPlaceholder),
-                        ),
-                  10.widthBox,
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const HeightBox(8),
-                      Text(
-                        chapterChairman.mname,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
+    return Card(
+      elevation: 1.0,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(width: 0.2),
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: ListTile(
+          leading: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: (chapterChairman.photo != "")
+                ? Container(
+                    margin: const EdgeInsets.fromLTRB(4, 4, 0, 4),
+                    child: CachedNetworkImage(
+                      imageUrl: chapterChairman.photo,
+                      height: 70,
+                      width: 60,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => Container(
+                        height: 70,
+                        width: 60,
+                        margin: const EdgeInsets.all(6),
+                        // child:
+                        // Image.asset(AssetsHelper.memberPlaceholder),
                       ),
-                      const HeightBox(4),
-                      Text(chapterChairman.cname),
-                    ],
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.error),
+                    ),
+                  )
+                : Container(
+                    height: 70,
+                    width: 60,
+                    margin: const EdgeInsets.all(6),
+                    // child: Image.asset(AssetsHelper.memberPlaceholder),
                   ),
-                ],
-              ),
+          ),
+          title: Text(
+            chapterChairman.mname,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
             ),
           ),
-        ),
-        Positioned(
-          bottom: 14,
-          right: 12,
-          child: MyIconRow(
+          subtitle: Text(chapterChairman.cname),
+          trailing:MyIconRow(
             chapterChairman: chapterChairman,
           ),
-        ),
-      ],
+          ),
     );
   }
 }
@@ -262,22 +243,146 @@ class MyIconRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 26,
-      width: 150,
-      margin: const EdgeInsets.only(bottom: 4),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          MailIcon(chapterChairman: chapterChairman),
-          const WidthBox(8),
-          PhoneWidget(chapterChairman: chapterChairman),
-          const WidthBox(8),
-          LocationIcon(chapterChairman: chapterChairman),
-          const WidthBox(8)
-        ],
-      ),
-    );
+    return Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(onPressed: () {
+                  Get.bottomSheet(
+        Container(
+          color: Colors.white,
+          height: 200,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: Text(
+                    'Select Email',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SelectableText(
+                  chapterChairman.email1,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SelectableText(
+                  chapterChairman.email2,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        elevation: 2.0,
+      );
+                }, icon: const Icon(Icons.mail)),
+                IconButton(onPressed: () {
+                  Get.bottomSheet(
+        Container(
+          color: Colors.white,
+          height: 200,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: Text(
+                    'Phone Detail',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SelectableText(
+                  chapterChairman.phone,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        elevation: 2.0,
+      );
+                }, icon: const Icon(Icons.phone)),
+                IconButton(onPressed: () {
+                  Get.bottomSheet(
+        Container(
+          color: Colors.white,
+          height: 200,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: Text(
+                    chapterChairman.mname,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SelectableText(
+                  chapterChairman.address1,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SelectableText(
+                  chapterChairman.address2,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        elevation: 2.0,
+      );
+                }, icon: Image.asset("assets/location.png",height: 60,width: 60)),
+              ],
+            );
+    
+    
+    
+    
   }
 }
 

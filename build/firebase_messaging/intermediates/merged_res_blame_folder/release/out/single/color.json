@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/firebase_messaging/intermediates/merged_res/release/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/4456ec95dc8de64d8fb4368ae916802e/transformed/jetified-play-services-base-18.0.1/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/firebase_messaging/intermediates/merged_res/release/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/4456ec95dc8de64d8fb4368ae916802e/transformed/jetified-play-services-base-18.0.1/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/firebase_messaging/intermediates/merged_res/release/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/4456ec95dc8de64d8fb4368ae916802e/transformed/jetified-play-services-base-18.0.1/res/color/common_google_signin_btn_tint.xml"
+    }
+]

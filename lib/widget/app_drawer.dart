@@ -7,9 +7,14 @@ class MyDrawer extends StatelessWidget {
   const MyDrawer({
     Key? key,
   }) : super(key: key);
-  void _launchURL(url) async => await launchUrl(url)
-      ? await launchUrl(url)
-      : throw 'Could not launch $url';
+  _launchURL(String strURL) async {
+    final uri = Uri.parse(strURL);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $strURL';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -62,34 +67,34 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           Divider(color: Colors.grey),
-          SizedBox(
-            height: 50,
-            child: ListTile(
-            title: Row(
-              children: const [
-                Icon(
-                  Icons.share_rounded,
-                  color: Colors.grey,
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Text(
-                  'Share App',
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    fontFamily: 'Calibri Regular',
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ],
-            ),
-            onTap: () {
-              // Share.share(AppConstants.share);
-              // Navigator.pop(context);
-            },
-          ),
-          ),
+          // SizedBox(
+          //   height: 50,
+          //   child: ListTile(
+          //   title: Row(
+          //     children: const [
+          //       Icon(
+          //         Icons.share_rounded,
+          //         color: Colors.grey,
+          //       ),
+          //       SizedBox(
+          //         width: 20,
+          //       ),
+          //       Text(
+          //         'Share App',
+          //         style: TextStyle(
+          //           fontSize: 16.0,
+          //           fontFamily: 'Calibri Regular',
+          //           fontWeight: FontWeight.w600,
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          //   onTap: () {
+          //      Share.share(AppConstants.share);
+          //      Navigator.pop(context);
+          //   },
+          // ),
+          // ),
           
           SizedBox(
             height: 50,
@@ -116,33 +121,33 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ),
-          SizedBox(
-            height: 50,
-            child: ListTile(
-            title: Row(
-              children: const [
-                Icon(
-                  Icons.notifications,
-                  color: Colors.grey,
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Text('Notifications',style: TextStyle(
-                    fontSize: 16.0,
-                    fontFamily: 'Calibri Regular',
-                    fontWeight: FontWeight.w600,
-                  ),),
-              ],
-            ),
-            onTap: () {
-              // Get.defaultDialog(
-              //   title: 'Notifications',
-              //   content: const NotificationList(),
-              // );
-            },
-          ),
-          ),
+          // SizedBox(
+          //   height: 50,
+          //   child: ListTile(
+          //   title: Row(
+          //     children: const [
+          //       Icon(
+          //         Icons.notifications,
+          //         color: Colors.grey,
+          //       ),
+          //       SizedBox(
+          //         width: 20,
+          //       ),
+          //       Text('Notifications',style: TextStyle(
+          //           fontSize: 16.0,
+          //           fontFamily: 'Calibri Regular',
+          //           fontWeight: FontWeight.w600,
+          //         ),),
+          //     ],
+          //   ),
+          //   onTap: () {
+          //     Get.defaultDialog(
+          //       title: 'Notifications',
+          //       content: const NotificationList(),
+          //     );
+          //   },
+          // ),
+          // ),
           SizedBox(
             height: 50,
             child: ListTile(

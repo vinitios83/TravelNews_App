@@ -40,6 +40,7 @@ void _handlePushFromList(bool newValue) {
       isPlayTV = false;
     });
   }
+  
 
   @override
   Widget build(BuildContext context) {

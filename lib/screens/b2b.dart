@@ -870,7 +870,7 @@ class _AssociationPageState extends State<AssociationPage>
                                                               userName:
                                                                   user?.aId ??
                                                                       "",
-                                                              initialIndex: 1,
+                                                              initialIndex: 0,
                                                             ),
                                                 ],
                                               ),
@@ -1287,7 +1287,7 @@ class _AssociationPageState extends State<AssociationPage>
                                                               userName:
                                                                   user?.aId ??
                                                                       "",
-                                                              initialIndex: 1,
+                                                              initialIndex: 0,
                                                             ),
                                                 ],
                                               ),

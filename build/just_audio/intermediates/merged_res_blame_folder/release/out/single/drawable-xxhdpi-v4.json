@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/just_audio/intermediates/merged_res/release/drawable-xxhdpi-v4/media_session_service_notification_ic_skip_to_previous.png",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/66d8a646d6483860064422ff083d4c36/transformed/jetified-media2-session-1.2.0/res/drawable-xxhdpi-v4/media_session_service_notification_ic_skip_to_previous.png"
+    },
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/just_audio/intermediates/merged_res/release/drawable-xxhdpi-v4/media_session_service_notification_ic_play.png",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/66d8a646d6483860064422ff083d4c36/transformed/jetified-media2-session-1.2.0/res/drawable-xxhdpi-v4/media_session_service_notification_ic_play.png"
+    },
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/just_audio/intermediates/merged_res/release/drawable-xxhdpi-v4/media_session_service_notification_ic_pause.png",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/66d8a646d6483860064422ff083d4c36/transformed/jetified-media2-session-1.2.0/res/drawable-xxhdpi-v4/media_session_service_notification_ic_pause.png"
+    },
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/just_audio/intermediates/merged_res/release/drawable-xxhdpi-v4/media_session_service_notification_ic_skip_to_next.png",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/66d8a646d6483860064422ff083d4c36/transformed/jetified-media2-session-1.2.0/res/drawable-xxhdpi-v4/media_session_service_notification_ic_skip_to_next.png"
+    },
+    {
+        "merged": "/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/just_audio/intermediates/merged_res/release/drawable-xxhdpi-v4/media_session_service_notification_ic_music_note.png",
+        "source": "/Users/vinitchapla/.gradle/caches/transforms-3/66d8a646d6483860064422ff083d4c36/transformed/jetified-media2-session-1.2.0/res/drawable-xxhdpi-v4/media_session_service_notification_ic_music_note.png"
+    }
+]

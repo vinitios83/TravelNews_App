@@ -23,7 +23,7 @@ class _AdvisoryProfilePageState extends State<AdvisoryProfilePage>
   final RemoteApi _remoteApi = RemoteApi();
   List<AdvisoryProfile> profileList = [];
   var isCallingAPI = true;
-  
+
   @override
   void initState() {
     super.initState();
@@ -38,10 +38,9 @@ class _AdvisoryProfilePageState extends State<AdvisoryProfilePage>
   fetchProfileList() async {
     await RemoteApi().getProfileList().then((value) => {
           profileList = value?.advisoryProfileList ?? [],
-          
-              this.setState(() {
-                isCallingAPI = false;
-              })
+          this.setState(() {
+            isCallingAPI = false;
+          })
         });
   }
 
@@ -71,116 +70,86 @@ class _AdvisoryProfilePageState extends State<AdvisoryProfilePage>
           ),
         ),
         bottomNavigationBar: const MyBannerAds(),
-        body: Padding(padding: EdgeInsets.all(10),
+        body: Padding(
+          padding: EdgeInsets.all(10),
           child: (profileList.length == 0)
-                    ? nullui()
-                    : Expanded(
-                        child: ListView.separated(
-                        separatorBuilder: (BuildContext context, int index) {
-                          return const Divider(
-                            height: 1,
-                          );
-                        },
-                        itemCount: this.profileList.length,
-                        itemBuilder: (context, index) {
-                          String imageUrl = this.profileList[index].image ?? "";
-                          String title = this.profileList[index].name ?? "";
-                          String detail = this.profileList[index].bio ?? "";
-                          return GestureDetector(
-      onTap: (() {
-        
-      }),
-      child: Padding(padding: EdgeInsets.only(bottom: 8),
-      child: Container(
-          height: 110,
-          child: Card(
-            elevation: 1.0,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(width: 0.2),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-            child: Padding(padding: EdgeInsets.all(8),
-              child: Row(
-              children: [
-                Expanded(
-                  flex: 33,
-                  child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: CachedNetworkImage(
-                                imageUrl: imageUrl,
-                                height: 80,
-                                width: 120,
-                                fit: BoxFit.cover,
-                                placeholder: (context, url) => SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.02,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.3,
-                                  child: Image.asset(
-                                    AppConstants.fallBackLogo,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                errorWidget: (context, url, _) => SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.03,
-                                  width: 120,
-                                  child: Image.asset(
-                                    AppConstants.fallBackLogo,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
+              ? nullui()
+              : ListView.separated(
+                  separatorBuilder: (BuildContext context, int index) {
+                    return const Divider(
+                      height: 0,
+                    );
+                  },
+                  itemCount: this.profileList.length,
+                  itemBuilder: (context, index) {
+                    String imageUrl = this.profileList[index].image ?? "";
+                    String title = this.profileList[index].name ?? "";
+                    String detail = this.profileList[index].bio ?? "";
+                    return GestureDetector(
+                        onTap: (() {}),
+                        child: Card(
+                              elevation: 1.0,
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 0.2),
+                                borderRadius: BorderRadius.circular(10.0),
                               ),
-                            ),
-                ),
-                VerticalDivider(
-                  color: Colors.white,
-                  width: 8.0,
-                ),
-                Expanded(
-                  flex: 70,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        flex: 25,
-                        child: Text(
-                                  title,
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 2,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                      color: Style.primaryfontcolor,
-                                      fontFamily: 'Calibri Regular'),
+                              child: ListTile(
+                                  leading: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: CachedNetworkImage(
+                                      imageUrl: imageUrl,
+                                      height: 80,
+                                      width: 80,
+                                      fit: BoxFit.cover,
+                                      placeholder: (context, url) => SizedBox(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.02,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.3,
+                                        child: Image.asset(
+                                          AppConstants.fallBackLogo,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      errorWidget: (context, url, _) =>
+                                          SizedBox(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.03,
+                                        width: 80,
+                                        child: Image.asset(
+                                          AppConstants.fallBackLogo,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  title: Text(
+                                    title,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: Style.primaryfontcolor,
+                                        fontFamily: 'Calibri Regular'),
+                                  ),
+                                  subtitle: Text(
+                                    detail,
+                                    maxLines: 4,
+                                    style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.normal,
+                                        color: Style.primaryfontcolor,
+                                        fontFamily: 'Calibri Regular'),
+                                  ),
                                 ),
-                              
-                      ),
-                      
-                      Expanded(flex: 70, child: Text(
-                          detail,
-                          maxLines: 4,
-                          style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.normal,
-                              color: Style.primaryfontcolor,
-                              fontFamily: 'Calibri Regular'),
-                        ),),
-                    ],
-                  ),
-                ),        
-              ],
-            ),
-            )
-          ),
-        ),
-      )
-    );
-                        },
-                      )),
-
-          )
-        );
+                            ),);
+                  },
+                ),
+        ));
   }
 
   Widget nullui() {

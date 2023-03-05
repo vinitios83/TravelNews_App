@@ -74,17 +74,18 @@ class B2BController extends GetxController {
 
     try {
       isLoading(true);
-      b2bListPackages.clear();
-      b2bListHotel.clear();
-      b2bListTransport.clear();
+      
       if (b2bListHotel.isEmpty) {
         isLoading(true);
         b2bListPackages.clear();
-        b2bListHotel.clear();
-        b2bListTransport.clear();
+      b2bListHotel.clear();
+      b2bListTransport.clear();
       }
       var b2b = await Apis.getB2BList(url: b2burl);
       if (b2b != null) {
+        b2bListPackages.clear();
+        b2bListHotel.clear();
+        b2bListTransport.clear();
         b2bListPackages.addAll(b2b[0].package);
         b2bListHotel.addAll(b2b[0].hotel);
         b2bListTransport.addAll(b2b[0].transport);
@@ -98,16 +99,13 @@ class B2BController extends GetxController {
   }
 
   Future<void> fetchB2Bbuyer() async {
-    b2bListPackages.clear();
-    b2bListHotel.clear();
-    b2bListTransport.clear();
+    // b2bListPackages.clear();
+    // b2bListHotel.clear();
+    // b2bListTransport.clear();
 
     var b2bbuyerurl = AssociationHelper.B2BbuyersDeals;
     try {
       isLoading(true);
-      b2bListPackages.clear();
-      b2bListHotel.clear();
-      b2bListTransport.clear();
       if (b2bListHotel.isEmpty) {
         isLoading(true);
         b2bListPackages.clear();
@@ -116,6 +114,9 @@ class B2BController extends GetxController {
       }
       var b2b = await Apis.getB2BList(url: b2bbuyerurl);
       if (b2b != null) {
+        b2bListPackages.clear();
+        b2bListHotel.clear();
+        b2bListTransport.clear();
         b2bListPackages.addAll(b2b[0].package);
         b2bListHotel.addAll(b2b[0].hotel);
         b2bListTransport.addAll(b2b[0].transport);
@@ -134,10 +135,7 @@ class B2BController extends GetxController {
     required String password,
   }) async {
     isLoading(true);
-    favListHotel.clear();
-    favListPackages.clear();
-    favListTransport.clear();
-    allFavDeals.clear();
+    
     try {
       if (favListHotel.isEmpty) {
         isLoading(true);
@@ -150,6 +148,10 @@ class B2BController extends GetxController {
       var favDeals =
           await Apis.getfavDeals(id: id, userid: userid, password: password);
       if (favDeals != null) {
+        favListHotel.clear();
+        favListPackages.clear();
+        favListTransport.clear();
+        allFavDeals.clear();
         allFavDeals.addAll(favDeals);
         for (var myDeals in favDeals) {
           if (myDeals.mname.toLowerCase() == 'package') {

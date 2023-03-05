@@ -66,9 +66,11 @@ class AssociationDetailController extends GetxController {
               '$b2burl&userid=$aUserName&password=$aUserPassword';
           var b2b = await Apis.getB2BList(url: urlWithCreds);
           if (b2b != null) {
+            if (b2b.length > 0) {
             b2bListPackages.addAll(b2b[0].package);
             b2bListHotel.addAll(b2b[0].hotel);
             b2bListTransport.addAll(b2b[0].transport);
+          }
           }
         }
       }

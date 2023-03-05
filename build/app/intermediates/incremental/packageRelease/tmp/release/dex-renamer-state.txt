@@ -1,0 +1,4 @@
+#Sat Feb 18 10:50:24 IST 2023
+base.0=/Users/vinitchapla/Documents/Vinit_Projects/AmitProjects/TravelNews_App_Git/TravelNews_App/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

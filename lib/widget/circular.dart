@@ -54,10 +54,7 @@ class _CircularUpdateScreenState extends State<CircularUpdateScreen> {
                     style: const TextStyle(
                         fontSize: 30, fontWeight: FontWeight.bold)),
               ),
-              body: SizedBox(
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
-                  child: Column(
+              body: Column(
                     children: [
                       Container(
                         height: 40,
@@ -101,13 +98,12 @@ class _CircularUpdateScreenState extends State<CircularUpdateScreen> {
                         child: PageView(
                           controller: controller,
                           children: [
-                            CircularList(circular: circularController.circular),
-                            CircularList(circular: circularController.updates),
+                             CircularList(circular: circularController.circular),
+                             CircularList(circular: circularController.updates),
                           ],
-                        ),
-                      )
+                        )),
                     ],
-                  )),
+                  )
             ),
           );
         }
@@ -168,99 +164,93 @@ class CircularTile extends StatelessWidget {
           ),
         ),
       ),
-      child: Stack(
-        children: [
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 1.2),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(2),
-            ),
-            child: Padding(padding: EdgeInsets.all(8),
-              child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: Column(
-                    children: [
-                      Text(
-                        list[index].date.split(" ").elementAt(0),
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Style.primaryfontcolor,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Row(
-                        children: [
-                          Text(
-                            list[index].date.split(" ").elementAt(1),
-                            style: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Style.primaryfontcolor,
-                            ),
-                          ),
-                          const WidthBox(3),
-                          Text(
-                            list[index].date.split(" ").elementAt(2),
-                            style: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Style.primaryfontcolor,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width - (170),
-                  child: Container(
-                    child: Flexible(child: Text(
-                      list[index].title,
+      child: ListTile(
+        leading: SizedBox(width: 100.0,
+          child: Text(
+                      list[index].date,
                       style: const TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                               color: Style.primaryfontcolor,
                               fontFamily: 'Calibri Regular'),
                     ),),
-                  ),
-                ),
-                const Icon(
+            title: Text(
+                      list[index].title,
+                      style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: Style.primaryfontcolor,
+                              fontFamily: 'Calibri Regular'),
+                    ),
+            trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 18,
                 ),
-              ],
-            ),
-            )
           ),
-          Positioned(
-            top: 0,
-            left: 0,
-            child: Badge(
-              toAnimate: true,
-              shape: BadgeShape.square,
-              padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
-              showBadge: isNew,
-              animationType: BadgeAnimationType.scale,
-              badgeColor: Colors.red,
-              borderRadius: BorderRadius.circular(0),
-              badgeContent: const Text(
-                'New',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 10,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+      // Container(
+      //       margin: const EdgeInsets.symmetric(vertical: 1.2),
+      //       decoration: BoxDecoration(
+      //         color: Colors.white,
+      //         borderRadius: BorderRadius.circular(2),
+      //       ),
+      //       child: Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //         crossAxisAlignment: CrossAxisAlignment.start,
+      //         children: [
+      //           Padding(
+      //             padding: const EdgeInsets.only(right: 10),
+      //             child: Column(
+      //               children: [
+      //                 Text(
+      //                   list[index].date.split(" ").elementAt(0),
+      //                   style: const TextStyle(
+      //                     fontSize: 14,
+      //                     fontWeight: FontWeight.bold,
+      //                     color: Style.primaryfontcolor,
+      //                   ),
+      //                 ),
+      //                 const SizedBox(height: 4),
+      //                 Row(
+      //                   children: [
+      //                     Text(
+      //                       list[index].date.split(" ").elementAt(1),
+      //                       style: const TextStyle(
+      //                         fontSize: 14,
+      //                         fontWeight: FontWeight.bold,
+      //                         color: Style.primaryfontcolor,
+      //                       ),
+      //                     ),
+      //                     const WidthBox(3),
+      //                     Text(
+      //                       list[index].date.split(" ").elementAt(2),
+      //                       style: const TextStyle(
+      //                         fontSize: 14,
+      //                         fontWeight: FontWeight.bold,
+      //                         color: Style.primaryfontcolor,
+      //                       ),
+      //                     ),
+      //                   ],
+      //                 ),
+      //               ],
+      //             ),
+      //           ),
+      //           Container(
+      //               child: Flexible(child: Text(
+      //                 list[index].title,
+      //                 style: const TextStyle(
+      //                         fontSize: 14,
+      //                         fontWeight: FontWeight.w400,
+      //                         color: Style.primaryfontcolor,
+      //                         fontFamily: 'Calibri Regular'),
+      //               ),),
+      //             ),
+      //           const Icon(
+      //             Icons.arrow_forward_ios,
+      //             size: 18,
+      //           ),
+      //         ],
+      //       ),
+      //     )
     );
   }
 }

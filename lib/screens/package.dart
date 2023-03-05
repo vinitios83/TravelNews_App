@@ -27,7 +27,7 @@ Future<void> loadInitalData() async {
   Widget build(BuildContext context) {
     // loadInitalData();
     return Scaffold(
-      body: (b2bController.b2bListPackages.isEmpty)
+      body: (b2bController.b2bListPackages == null || b2bController.b2bListPackages.length == 0)
           ? const Center(
               child: Text('No Data'),
             )

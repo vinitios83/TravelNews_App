@@ -44,14 +44,16 @@ class _ExpertSkillsPageState extends State<ExpertSkillsPage>
           })
         });
   }
-_launchURL(String strURL) async {
-  final uri = Uri.parse(strURL);
-  if (await canLaunchUrl(uri)) {
-    await launchUrl(uri);
-  } else {
-    throw 'Could not launch $strURL';
+
+  _launchURL(String strURL) async {
+    final uri = Uri.parse(strURL);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $strURL';
+    }
   }
-}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,11 +84,10 @@ _launchURL(String strURL) async {
           padding: EdgeInsets.all(10),
           child: (expertSkillList.length == 0)
               ? nullui()
-              : Expanded(
-                  child: ListView.separated(
+              : ListView.separated(
                   separatorBuilder: (BuildContext context, int index) {
                     return const Divider(
-                      height: 1,
+                      height: 0,
                     );
                   },
                   itemCount: this.expertSkillList.length,
@@ -94,70 +95,46 @@ _launchURL(String strURL) async {
                     String title = this.expertSkillList[index].name ?? "";
                     String detail = this.expertSkillList[index].link ?? "";
                     return GestureDetector(
-                        onTap: (() {
-                          this._launchURL(detail);
-                        }),
-                        child: Padding(
-                          padding: EdgeInsets.only(bottom: 8),
-                          child: Container(
-                            height: 110,
-                            child: Card(
-                                elevation: 1.0,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(width: 0.2),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.all(8),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Container(
-                                        width:
-                                            MediaQuery.of(context).size.width -
-                                                (80),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              title,
-                                              style: const TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Style.primaryfontcolor,
-                                                  fontFamily:
-                                                      'Calibri Regular'),
-                                            ),
-                                            Text(
-                                              detail,
-                                              overflow: TextOverflow.ellipsis,
-                                              maxLines: 2,
-                                              style: const TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: Colors.blue,
-                                                  fontFamily:
-                                                      'Calibri Regular'),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Icon(
-                                        Icons.keyboard_arrow_right,
-                                        size: 18,
-                                      ),
-                                    ],
-                                  ),
-                                )),
+                      onTap: (() {
+                        this._launchURL(detail);
+                      }),
+                      child: Card(
+                        elevation: 1.0,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 0.2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Card(
+                          child: ListTile(
+                            title: Text(
+                              title,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                              style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Style.primaryfontcolor,
+                                  fontFamily: 'Calibri Regular'),
+                            ),
+                            subtitle: Text(
+                              detail,
+                              maxLines: 4,
+                              style: const TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  color: Style.primaryfontcolor,
+                                  fontFamily: 'Calibri Regular'),
+                            ),
+                            trailing: Icon(
+                              Icons.arrow_forward_ios,
+                              size: 18,
+                            ),
                           ),
-                        ));
+                        ),
+                      ),
+                    );
                   },
-                )),
+                ),
         ));
   }
 
